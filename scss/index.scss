@@ -1,0 +1,55 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css?family=Black+Han+Sans:400');
+@import url('https://fonts.googleapis.com/css?family=Black+Han+Sans&display=swap&subset=korean');
+
+
+
+// font-family: 'Black Han Sans', 'sans-serif';
+
+
+*{margin:0; padding:0;}
+@mixin flex($flex,$js,$ali,$row) {
+    display: $flex;
+    justify-content: $js;
+    align-items: $ali;
+    flex-direction: $row;
+    @content;
+}
+@mixin bg($url,$size,$po) {
+    background-image: url($url);
+    background-size: $size;
+    background-position: $po;
+    @content
+};
+
+
+header{
+    width:100vw;
+    height:100vh;
+    background-color: antiquewhite;
+    @include flex(flex,space-between,flex-end,column);
+    h1{
+    font: {
+        family: 'Black Han Sans', 'sans-serif';
+        size: 10.5vw;
+        
+    }
+    
+    }
+}
+
+section{
+    width:100vw;
+    height:1000px;
+    background-color: blueviolet;
+    @include bg('../img/tv2.jpg',cover,center);
+
+    p{
+        font: {
+            family: 'Black Han Sans', 'sans-serif';
+        size: 5vw;
+        }
+    }
+}
+
