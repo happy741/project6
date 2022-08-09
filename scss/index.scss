@@ -8,70 +8,185 @@
 // font-family: 'Black Han Sans', 'sans-serif';
 
 
-*{margin:0; padding:0;}
-$w:100vw;
+* {
+    margin: 0;
+    padding: 0;
+}
 
-@mixin flex($flex,$js,$ali,$row) {
+$w: 100vw;
+$t: 0.3s ease;
+$c: pointer;
+
+@mixin flex($flex, $js, $ali, $row) {
     display: $flex;
     justify-content: $js;
     align-items: $ali;
     flex-direction: $row;
     @content;
 }
-@mixin bg($url,$size,$po) {
+
+@mixin bg($url, $size, $po) {
     background-image: url($url);
     background-size: $size;
     background-position: $po;
     @content
-};
+}
 
+;
 
-header{
-    width:$w;
-    height:100vh;
+@mixin main($bcolor, $url, $x1, $y1, $col) {
+    background: $bcolor;
+    -webkit-mask: url($url);
+    mask: url($url);
+    -webkit-mask-size: $x1 $y1;
+    mask-size: $x1 $y1;
+    color: $col;
+}
+
+header {
+    width: $w;
+    height: 100vh;
     background-color: antiquewhite;
-    @include flex(flex,space-between,flex-end,column);
-    h1{
+    @include flex(flex, space-between, flex-end, column);
+    @include main(bage, "https://raw.githubusercontent.com/pizza3/asset/master/natureSmaller.png", 7100%, 100%, #333);
+
+    animation: ani2 1.5s steps(70) forwards;
+
+}
+
+h1 {
     font: {
         family: 'Black Han Sans', 'sans-serif';
         size: 10.5vw;
-        
+
     }
-    
-    }
+
 }
 
-section{
-    width:$w;
-    height:1000px;
+
+
+
+section {
+    width: $w;
+    height: 1000px;
     background-color: blueviolet;
-    @include bg('../img/2tv.jpg',cover,center);
-    @include flex(flex,center,flex-start,column);
+    @include bg('../img/2tv.jpg', cover, center);
+    @include flex(flex, center, flex-start, column);
     color: white;
-    
+
 }
-#sec_text{
-    p{
-        position:relative;
+
+.text {
+    overflow: hidden;
+    transition: $t;
+    cursor: $c;
+
+    p {
+        transition:$t;
+        position: relative;
+
         font: {
             family: 'Black Han Sans', 'sans-serif';
-        size: 4.5vw;
-       
+            size: 4.5vw;
+
         }
 
-     
-    
+
+
+
     }
 
-    :first-of-type::before{
-        content:'music on';
-        position:absolute;
-        width:100%;
-        height:100%;
-        background-color: aqua;
+
+
+    &:hover p {
+        transform: translateY(-90%);
     }
 
-    
-    
 }
 
+#sec_text {
+    height: 565px;
+    @include flex(flex, space-around, flex-start, column);
+
+    :first-child {
+        p::before {
+            content: 'MUSIC ON';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            font-size: 4.5vw;
+            transform: translateY(90%);
+            transition: $t;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    }
+
+    :nth-child(2) {
+        p::before {
+            content: 'URBAN PHOTO';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            font-size: 4.5vw;
+            transform: translateY(90%);
+            transition: $t;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    }
+
+    :nth-child(3) {
+        p::before {
+            content: 'QUANTIC DREAM';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            font-size: 4.5vw;
+            transform: translateY(90%);
+            transition: $t;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    }
+
+    :nth-child(4) {
+        p::before {
+            content: 'POKEMON';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            font-size: 4.5vw;
+            transform: translateY(90%);
+            transition: $t;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    }
+
+    :nth-child(5) {
+        p::before {
+            content: "BANDI&LUNI'S";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            font-size: 4.5vw;
+            transform: translateY(90%);
+            transition: $t;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    }
+
+
+}
+
+
+
+
+@keyframes ani2 {
+    from {
+        -webkit-mask-position: 100% 0;
+        mask-position: 100% 0;
+    }
+
+    to {
+        -webkit-mask-position: 0 0;
+        mask-position: 0 0;
+    }
+}

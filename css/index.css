@@ -13,8 +13,17 @@ header {
   justify-content: space-between;
   align-items: flex-end;
   flex-direction: column;
+  background: bage;
+  -webkit-mask: url("https://raw.githubusercontent.com/pizza3/asset/master/natureSmaller.png");
+  mask: url("https://raw.githubusercontent.com/pizza3/asset/master/natureSmaller.png");
+  -webkit-mask-size: 7100% 100%;
+  mask-size: 7100% 100%;
+  color: #333;
+  -webkit-animation: ani2 1.5s steps(70) forwards;
+          animation: ani2 1.5s steps(70) forwards;
 }
-header h1 {
+
+h1 {
   font-family: "Black Han Sans", "sans-serif";
   font-size: 10.5vw;
 }
@@ -33,15 +42,97 @@ section {
   color: white;
 }
 
-#sec_text p {
+.text {
+  overflow: hidden;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+.text p {
+  transition: 0.3s ease;
   position: relative;
   font-family: "Black Han Sans", "sans-serif";
   font-size: 4.5vw;
 }
-#sec_text :first-of-type::before {
-  content: "music on";
+.text:hover p {
+  transform: translateY(-90%);
+}
+
+#sec_text {
+  height: 565px;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-direction: column;
+}
+#sec_text :first-child p::before {
+  content: "MUSIC ON";
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: aqua;
+  font-size: 4.5vw;
+  transform: translateY(90%);
+  transition: 0.3s ease;
+  font-family: Arial, Helvetica, sans-serif;
+}
+#sec_text :nth-child(2) p::before {
+  content: "URBAN PHOTO";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  font-size: 4.5vw;
+  transform: translateY(90%);
+  transition: 0.3s ease;
+  font-family: Arial, Helvetica, sans-serif;
+}
+#sec_text :nth-child(3) p::before {
+  content: "QUANTIC DREAM";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  font-size: 4.5vw;
+  transform: translateY(90%);
+  transition: 0.3s ease;
+  font-family: Arial, Helvetica, sans-serif;
+}
+#sec_text :nth-child(4) p::before {
+  content: "POKEMON";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  font-size: 4.5vw;
+  transform: translateY(90%);
+  transition: 0.3s ease;
+  font-family: Arial, Helvetica, sans-serif;
+}
+#sec_text :nth-child(5) p::before {
+  content: "BANDI&LUNI'S";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  font-size: 4.5vw;
+  transform: translateY(90%);
+  transition: 0.3s ease;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@-webkit-keyframes ani2 {
+  from {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+  to {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+}
+
+@keyframes ani2 {
+  from {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+  to {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
 }
