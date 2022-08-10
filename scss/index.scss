@@ -213,18 +213,17 @@ section {
 }
 
 .sc1{
-    transform:scale(1.5);
-    transform-origin: 55% 82%;
+   transform:translate3d(0px,-740px,0px) scale(2);
 }
 
 .sc2{
-    transform:scale(3);
-    transform-origin: 53% 83%;
+    transform:translate3d(0px,-1315px,0px) scale(3);
+  
 }
 
 .sc3{
-    transform:scale(3) rotate(-5deg);
-    transform-origin: bottom;
+    transform:scale(3.5) rotate(-5deg) translate3d(0px,-459px,0px);
+ 
 }
 
 .sc4{

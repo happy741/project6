@@ -12,91 +12,117 @@
 </head>
 
 <body>
+  
+    <div id="wrap">
+        <header>
+            <h1>HWANG GI BBEUM</h1>
+            <H1>PORTFOLIO</H1>
+        </header>
+        <section>
 
-    <header>
-        <h1>HWANG GI BBEUM</h1>
-        <H1>PORTFOLIO</H1>
-    </header>
-    <section>
-      
-        <div class="port_box">
-            <div class="port_box2">
+            <div class="port_box">
                 <div class="close"></div>
+                <div class="port_box2">
+                   
+                </div>
             </div>
-        </div>
-        <div id="sec_text">
-            <div class="text">
-                <p>MUSIC ON</p>
+            <div id="sec_text">
+                <div class="text">
+                    <p>MUSIC ON</p>
+                </div>
+                <div class="text">
+                    <p>URBAN PHOTO</p>
+                </div>
+                <div class="text">
+                    <p>QUANTIC DREAM</p>
+                </div>
+                <div class="text">
+                    <p>POKEMON</p>
+                </div>
+                <div class="text">
+                    <p>BANDI&LUNI'S</p>
+                </div>
             </div>
-            <div class="text">
-                <p>URBAN PHOTO</p>
+            <div id="sec_box">
+                <div class="video"></div>
             </div>
-            <div class="text">
-                <p>QUANTIC DREAM</p>
-            </div>
-            <div class="text">
-                <p>POKEMON</p>
-            </div>
-            <div class="text">
-                <p>BANDI&LUNI'S</p>
-            </div>
-        </div>
-        <div id="sec_box">
-            <div class="video"></div>
-        </div>
 
-    </section>
+        </section>
 
-    <div class="about"></div>
-
+        <div class="about"></div>
+    </div>
 
     <script>
-//       $(window).scroll(function () { 
-// 	var scroll = window.scrollY;
-//     console.log(scroll); 
-// });3617
+        //       $(window).scroll(function () { 
+        // 	var scroll = window.scrollY;
+        //     console.log(scroll); 
+        // });3617
 
 
-$(document).ready(function(){ 
-  $(window).scroll(function(){ 
-      $('#sec_box').css("opacity", 0 + $(window).scrollTop() / 800) 
-  }) 
-}) ;
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                $('#sec_box').css("opacity", 0 + $(window).scrollTop() / 800)
+            })
+        });
 
-$(function(){
-    $('.text>p').click(function(){
-        $('.port_box').css({transform:'translate(0)'});
-    });
+        $(function () {
+            $('.text>p').click(function () {
+                $('.port_box').css({ transform: 'translate(0)' });
+            });
 
-    $('.close').click(function(){
-        $('.port_box').css({transform:'translate(-100%)'});
-    });
-});
+            $('.close').click(function () {
+                $('.port_box').css({ transform: 'translate(-100%)' });
+            });
+
+            var pointSize = $(".close").width()/2;
+// $("#wrap").mousemove(function(e){    
+//     $('.close').css("top", e.pageY-pointSize);
+//     $('.close').css("left", e.pageX-pointSize);
+//     $('.close').fadeIn();
+// });
+// $("#wrap").on("mouseleave", function(){
+//   $('.close').fadeOut();
+// });
+
+$(document).mousemove(function(e){
+        var mouseX = e.pageX;
+        var mouseY = e.pageY;
+
+        $('.close').css({
+            left: mouseX + "px",
+            top : mouseY + "px"
+        })
+    })
+
+        });
 
 
-    
-    window.addEventListener("scroll",function(){
-        var scroll11 = window.scrollY;
-        console.log(scroll11);
-        var bg=document.getElementById('sec_box');
 
-        if(scroll11>3417){bg.classList.add('sc1')}else{
-            bg.classList.remove('sc1');
-        };
+        window.addEventListener("scroll", function () {
+            var scroll11 = window.scrollY;
+            console.log(scroll11);
+            var bg = document.getElementById('sec_box');
 
-        if(scroll11>3617){bg.classList.add('sc2')}else{
-            bg.classList.remove('sc2');
-        };
-    });
+            if (scroll11 > 3417) { bg.classList.add('sc1') } else {
+                bg.classList.remove('sc1');
+            };
 
-    const close=document.querySelector('.close');
-    document.addEventListener('mousemove',(e)=>{
-        const mouseX =e.clientX;
-        const mouseY= e.clientY;
+            if (scroll11 > 3517) { bg.classList.add('sc2') } else {
+                bg.classList.remove('sc2');
+            };
+            if (scroll11 > 3617) { bg.classList.add('sc3') } else {
+                bg.classList.remove('sc3');
+            };
+        });
 
-        close.style.left=mouseX+'px';
-        close.style.top=mouseY+'px';
-    });
+        // const close = document.querySelector('.close');
+        // document.addEventListener('mousemove', (e) => {
+        //     const mouseX = e.clientX;
+        //     const mouseY = e.clientY;
+
+        //     close.style.left = mouseX + 'px';
+        //     close.style.top = mouseY + 'px';
+        // });
     </script>
 </body>
 
