@@ -30,16 +30,36 @@ h1 {
 
 section {
   width: 100vw;
-  height: 1000px;
+  height: 4000px;
   background-color: blueviolet;
-  background-image: url("../img/2tv.jpg");
+  position: relative;
+  color: white;
+}
+
+#sec_box {
+  width: 100%;
+  height: 2040px;
+  transition: 1s linear;
+  top: -121.8%;
+  background-image: url("../img/3tv.png");
   background-size: cover;
-  background-position: center;
+  background-position: flex-start;
   display: flex;
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
-  color: white;
+  background-color: #333;
+  position: -webkit-sticky;
+  position: sticky;
+}
+#sec_box .video {
+  width: 306px;
+  height: 235px;
+  background-color: cadetblue;
+  position: absolute;
+  top: 74.5%;
+  left: 42%;
+  z-index: -999;
 }
 
 .text {
@@ -58,11 +78,14 @@ section {
 }
 
 #sec_text {
-  height: 565px;
+  height: 779px;
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
   flex-direction: column;
+  position: absolute;
+  z-index: 4;
+  top: 40%;
 }
 #sec_text :first-child p::before {
   content: "MUSIC ON";
@@ -113,6 +136,54 @@ section {
   transform: translateY(90%);
   transition: 0.3s ease;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.port_box {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform: translateX(-100%);
+  z-index: 5;
+  transition: 0.3s ease;
+}
+
+.port_box2 {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  background-color: rgb(73, 70, 66);
+}
+
+.sc1 {
+  transform: scale(1.5);
+  transform-origin: 55% 82%;
+}
+
+.sc2 {
+  transform: scale(3);
+  transform-origin: 53% 83%;
+}
+
+.sc3 {
+  transform: scale(3) rotate(-5deg);
+  transform-origin: bottom;
+}
+
+.sc4 {
+  transform: scale(4) rotate(-10deg);
+  transform-origin: bottom;
+}
+
+.close {
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  background-color: crimson;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 999;
 }
 
 @-webkit-keyframes ani2 {
