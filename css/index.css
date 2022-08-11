@@ -52,7 +52,8 @@ section {
   position: -webkit-sticky;
   position: sticky;
 }
-#sec_box .video {
+
+.video {
   width: 306px;
   height: 235px;
   background-color: cadetblue;
@@ -60,6 +61,10 @@ section {
   top: 74.5%;
   left: 42%;
   z-index: -999;
+}
+.video img {
+  width: 100%;
+  height: 100%;
 }
 
 .text {
@@ -147,11 +152,99 @@ section {
   transition: 0.3s ease;
 }
 
-.port_box2 {
+.port_box_left {
   width: 50%;
   height: 100%;
-  position: absolute;
+  float: right;
   background-color: rgb(73, 70, 66);
+}
+.port_box_left h1 {
+  font-size: 5vw;
+}
+.port_box_left .button {
+  width: 200px;
+  height: 50px;
+  border-radius: 30px;
+  border: 1px solid white;
+  background-color: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.port_box_left .button a {
+  color: white;
+  text-decoration: none;
+}
+
+.page {
+  width: 100%;
+  height: 2000px;
+  background-color: cornsilk;
+  color: #333;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.page :nth-child(2) {
+  background-image: url("../img/music1.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.page :nth-child(3) {
+  background-image: url("../img/music2.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.page :nth-child(4) {
+  background-image: url("../img/music3.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.page :nth-child(5) {
+  background-image: url("../img/music4.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.page :nth-child(6) {
+  background-image: url("../img/music5.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.page :nth-child(7) {
+  background-image: url("../img/music6.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.page_box {
+  width: 80%;
+  height: 300px;
+  background-color: brown;
+}
+
+.page_box2 {
+  width: 40%;
+  height: 300px;
+  background-color: blue;
+}
+.page_box2 img {
+  width: 100%;
+  height: 100%;
+}
+
+.port_box_right::-webkit-scrollbar {
+  display: none;
+}
+
+.port_box_right {
+  width: 50%;
+  height: 100%;
+  overflow: scroll;
+  position: absolute;
+  background-color: aqua;
 }
 
 .sc1 {
@@ -167,8 +260,22 @@ section {
 }
 
 .sc4 {
-  transform: scale(4) rotate(-10deg);
-  transform-origin: bottom;
+  transform: scale(5) rotate(-10deg) translate3d(-23px, -499px, 0px);
+}
+
+.sc5 {
+  transform: scale(7) rotate(-10deg) translate3d(-23px, -516px, 0px);
+}
+
+.sc6 {
+  transform: scale(7) rotate(-10deg) translate3d(-23px, -516px, 0px);
+  display: none;
+}
+
+.about {
+  width: 100%;
+  height: 1000px;
+  background-color: darkgreen;
 }
 
 .close {

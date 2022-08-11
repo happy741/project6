@@ -12,7 +12,7 @@
 </head>
 
 <body>
-  
+
     <div id="wrap">
         <header>
             <h1>HWANG GI BBEUM</h1>
@@ -21,9 +21,42 @@
         <section>
 
             <div class="port_box">
-                <div class="close"></div>
-                <div class="port_box2">
-                   
+
+                <div class="port_box_right">
+                    <div class="page">
+                        <p>악기를 판매하는 쇼핑몰 홈페이지로
+                            처음 제작한 홈페이지 입니다.
+                        </p>
+                        <div class="page_box">
+
+                        </div>
+                        <div class="page_box">
+
+                        </div>
+                        <div class="page_box2">
+
+                        </div>
+                        <div class="page_box2">
+
+                        </div>
+                        <div class="page_box">
+
+                        </div>
+                        <div class="page_box">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="port_box_left">
+                    <div class="left_box">
+                        <h1>MUSICON</h1>
+                        <div class="button"><a href="#">open website</a></div>
+                    </div>
+                    <div class="left_box">
+                        <div id="next"></div>
+                        <div id="prev"></div>
+                        <div id="close"></div>
+                    </div>
                 </div>
             </div>
             <div id="sec_text">
@@ -44,7 +77,9 @@
                 </div>
             </div>
             <div id="sec_box">
-                <div class="video"></div>
+                <div class="video">
+                    <img src="img/noise.png" alt="">
+                </div>
             </div>
 
         </section>
@@ -74,25 +109,25 @@
                 $('.port_box').css({ transform: 'translate(-100%)' });
             });
 
-            var pointSize = $(".close").width()/2;
-// $("#wrap").mousemove(function(e){    
-//     $('.close').css("top", e.pageY-pointSize);
-//     $('.close').css("left", e.pageX-pointSize);
-//     $('.close').fadeIn();
-// });
-// $("#wrap").on("mouseleave", function(){
-//   $('.close').fadeOut();
-// });
+            //             var pointSize = $(".close").width()/2;
+            // $("#wrap").mousemove(function(e){    
+            //     $('.close').css("top", e.pageY-pointSize);
+            //     $('.close').css("left", e.pageX-pointSize);
+            //     $('.close').fadeIn();
+            // });
+            // $("#wrap").on("mouseleave", function(){
+            //   $('.close').fadeOut();
+            // });
 
-$(document).mousemove(function(e){
-        var mouseX = e.pageX;
-        var mouseY = e.pageY;
+            $(document).mousemove(function (e) {
+                var mouseX = e.pageX;
+                var mouseY = e.pageY;
 
-        $('.close').css({
-            left: mouseX + "px",
-            top : mouseY + "px"
-        })
-    })
+                $('.close').css({
+                    left: mouseX + "px",
+                    top: mouseY + "px"
+                })
+            })
 
         });
 
@@ -113,7 +148,23 @@ $(document).mousemove(function(e){
             if (scroll11 > 3617) { bg.classList.add('sc3') } else {
                 bg.classList.remove('sc3');
             };
+            if (scroll11 > 3717) { bg.classList.add('sc4') } else {
+                bg.classList.remove('sc4');
+            };
+            if (scroll11 > 3817) { bg.classList.add('sc5') } else {
+                bg.classList.remove('sc5');
+            };
+            if (scroll11 > 3917) { bg.classList.add('sc6') } else {
+                bg.classList.remove('sc6');
+            };
         });
+
+        var img = document.querySelectorAll('page_box')
+
+        for (var i = 0; i < 6; i++) {
+            image += 'musicon' + i + '.jpg';
+            img.style.backgroundImage = url('image')
+        }
 
         // const close = document.querySelector('.close');
         // document.addEventListener('mousemove', (e) => {
