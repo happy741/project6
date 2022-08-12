@@ -14,51 +14,14 @@
 <body>
 
     <div id="wrap">
+        <div class="close"></div>
         <header>
             <h1>HWANG GI BBEUM</h1>
             <H1>PORTFOLIO</H1>
         </header>
         <section>
 
-            <div class="port_box">
-
-                <div class="port_box_right">
-                    <div class="page">
-                        <p>악기를 판매하는 쇼핑몰 홈페이지로
-                            처음 제작한 홈페이지 입니다.
-                        </p>
-                        <div class="page_box">
-
-                        </div>
-                        <div class="page_box">
-
-                        </div>
-                        <div class="page_box2">
-
-                        </div>
-                        <div class="page_box2">
-
-                        </div>
-                        <div class="page_box">
-
-                        </div>
-                        <div class="page_box">
-
-                        </div>
-                    </div>
-                </div>
-                <div class="port_box_left">
-                    <div class="left_box">
-                        <h1>MUSICON</h1>
-                        <div class="button"><a href="#">open website</a></div>
-                    </div>
-                    <div class="left_box">
-                        <div id="next"></div>
-                        <div id="prev"></div>
-                        <div id="close"></div>
-                    </div>
-                </div>
-            </div>
+           
             <div id="sec_text">
                 <div class="text">
                     <p>MUSIC ON</p>
@@ -78,13 +41,68 @@
             </div>
             <div id="sec_box">
                 <div class="video">
-                    <img src="img/noise.png" alt="">
+                    <!-- <img src="img/noise.png" alt=""> -->
                 </div>
             </div>
 
         </section>
 
-        <div class="about"></div>
+        <div class="port_box">
+
+            <div class="port_box_right">
+                <div class="page">
+                    <p>악기를 판매하는 쇼핑몰 홈페이지로
+                        처음 제작한 홈페이지 입니다.
+                    </p>
+                    <div class="page_box bgg">
+
+                    </div>
+
+                    <div class="page_box bgg">
+
+                    </div>
+
+                    <div class="page_box2 bgg">
+
+                    </div>
+
+                    <div class="page_box2 bgg">
+
+                    </div>
+
+                    <div class="page_box3 bgg">
+
+                    </div>
+
+                    <div class="page_box3 bgg">
+
+                    </div>
+
+                    <div class="page_box3 bgg">
+
+                    </div>
+                </div>
+            </div>
+            <div class="port_box_left">
+                <div class="left_box">
+                    <h1>MUSICON</h1>
+                    <div class="button"><a href="#">open website</a></div>
+                </div>
+                <div class="left_box">
+                    <div id="next"><span>next</span></div>
+                    <div id="prev"><span>prev</span></div>
+                    <div id="close"><span>close</span></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="about">
+            <p>asdf</p>
+
+            <p>asdf</p>
+
+            <p>sdafsdfs</p>
+        </div>
     </div>
 
     <script>
@@ -105,29 +123,29 @@
                 $('.port_box').css({ transform: 'translate(0)' });
             });
 
-            $('.close').click(function () {
+            $('#close').click(function () {
                 $('.port_box').css({ transform: 'translate(-100%)' });
             });
 
-            //             var pointSize = $(".close").width()/2;
-            // $("#wrap").mousemove(function(e){    
-            //     $('.close').css("top", e.pageY-pointSize);
-            //     $('.close').css("left", e.pageX-pointSize);
-            //     $('.close').fadeIn();
-            // });
-            // $("#wrap").on("mouseleave", function(){
-            //   $('.close').fadeOut();
-            // });
+                        var pointSize = $(".close").width()/2;
+            $("#wrap").mousemove(function(e){    
+                $('.close').css("top", e.pageY-pointSize);
+                $('.close').css("left", e.pageX-pointSize);
+                $('.close').fadeIn();
+            });
+            $("#wrap").on("mouseleave", function(){
+              $('.close').fadeOut();
+            });
 
-            $(document).mousemove(function (e) {
-                var mouseX = e.pageX;
-                var mouseY = e.pageY;
+            // $(document).mousemove(function (e) {
+            //     var mouseX = e.pageX;
+            //     var mouseY = e.pageY;
 
-                $('.close').css({
-                    left: mouseX + "px",
-                    top: mouseY + "px"
-                })
-            })
+            //     $('.close').css({
+            //         left: mouseX + "px",
+            //         top: mouseY + "px"
+            //     })
+            // })
 
         });
 
@@ -157,23 +175,12 @@
             if (scroll11 > 3917) { bg.classList.add('sc6') } else {
                 bg.classList.remove('sc6');
             };
+            if (scroll11 > 4017) { bg.style.display='none' } else {
+                bg.style.display='block'
+            };
         });
 
-        var img = document.querySelectorAll('page_box')
-
-        for (var i = 0; i < 6; i++) {
-            image += 'musicon' + i + '.jpg';
-            img.style.backgroundImage = url('image')
-        }
-
-        // const close = document.querySelector('.close');
-        // document.addEventListener('mousemove', (e) => {
-        //     const mouseX = e.clientX;
-        //     const mouseY = e.clientY;
-
-        //     close.style.left = mouseX + 'px';
-        //     close.style.top = mouseY + 'px';
-        // });
+    
     </script>
 </body>
 

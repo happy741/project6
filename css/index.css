@@ -31,7 +31,6 @@ h1 {
 section {
   width: 100vw;
   height: 4000px;
-  background-color: blueviolet;
   position: relative;
   color: white;
 }
@@ -48,7 +47,6 @@ section {
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
-  background-color: #333;
   position: -webkit-sticky;
   position: sticky;
 }
@@ -56,7 +54,6 @@ section {
 .video {
   width: 306px;
   height: 235px;
-  background-color: cadetblue;
   position: absolute;
   top: 74.5%;
   left: 42%;
@@ -144,28 +141,35 @@ section {
 }
 
 .port_box {
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   position: absolute;
   transform: translateX(-100%);
   z-index: 5;
   transition: 0.3s ease;
+  top: 281%;
 }
 
 .port_box_left {
-  width: 50%;
+  width: 37%;
   height: 100%;
   float: right;
-  background-color: rgb(73, 70, 66);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .port_box_left h1 {
   font-size: 5vw;
+}
+.port_box_left span {
+  font-size: 1.5vw;
 }
 .port_box_left .button {
   width: 200px;
   height: 50px;
   border-radius: 30px;
-  border: 1px solid white;
+  transition: 0.3s ease;
+  border: 1px solid black;
   background-color: none;
   display: flex;
   justify-content: center;
@@ -173,8 +177,48 @@ section {
   flex-direction: row;
 }
 .port_box_left .button a {
-  color: white;
+  color: black;
   text-decoration: none;
+}
+.port_box_left .button:hover {
+  background-color: white;
+  border: 1px solid white;
+}
+.port_box_left .button:hover a {
+  color: black;
+}
+
+.bgg:nth-child(1) {
+  background-image: url(../img/music1.jpg);
+}
+
+.bgg:nth-child(2) {
+  background-image: url(../img/music2.jpg);
+}
+
+.bgg:nth-child(3) {
+  background-image: url(../img/music3.jpg);
+}
+
+.bgg:nth-child(4) {
+  background-image: url(../img/music4.jpg);
+}
+
+.bgg:nth-child(5) {
+  background-image: url(../img/music5.jpg);
+}
+
+.bgg:nth-child(6) {
+  background-image: url(../img/music6.jpg);
+}
+
+.bgg:nth-child(7) {
+  background-image: url(../img/music7.jpg);
+}
+
+.bgg {
+  background-position: center;
+  background-size: cover;
 }
 
 .page {
@@ -187,36 +231,6 @@ section {
   align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
-}
-.page :nth-child(2) {
-  background-image: url("../img/music1.jpg");
-  background-size: cover;
-  background-position: center;
-}
-.page :nth-child(3) {
-  background-image: url("../img/music2.jpg");
-  background-size: cover;
-  background-position: center;
-}
-.page :nth-child(4) {
-  background-image: url("../img/music3.jpg");
-  background-size: cover;
-  background-position: center;
-}
-.page :nth-child(5) {
-  background-image: url("../img/music4.jpg");
-  background-size: cover;
-  background-position: center;
-}
-.page :nth-child(6) {
-  background-image: url("../img/music5.jpg");
-  background-size: cover;
-  background-position: center;
-}
-.page :nth-child(7) {
-  background-image: url("../img/music6.jpg");
-  background-size: cover;
-  background-position: center;
 }
 
 .page_box {
@@ -235,12 +249,17 @@ section {
   height: 100%;
 }
 
+.page_box3 {
+  width: 30%;
+  height: 300px;
+}
+
 .port_box_right::-webkit-scrollbar {
   display: none;
 }
 
 .port_box_right {
-  width: 50%;
+  width: 60%;
   height: 100%;
   overflow: scroll;
   position: absolute;
@@ -276,6 +295,9 @@ section {
   width: 100%;
   height: 1000px;
   background-color: darkgreen;
+  margin-top: -45%;
+  position: absolute;
+  z-index: -1;
 }
 
 .close {
