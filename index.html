@@ -14,7 +14,7 @@
 <body>
 
     <div id="wrap">
-        <div class="close"></div>
+
         <header>
             <h1>HWANG GI BBEUM</h1>
             <H1>PORTFOLIO</H1>
@@ -45,56 +45,101 @@
                 </div>
             </div>
 
+            <div class="port_box">
+
+                <div class="port_box_right">
+                    <div class="page">
+                        <p>악기를 판매하는 쇼핑몰 홈페이지로
+                            처음 제작한 홈페이지 입니다.
+                        </p>
+                        <div class="page_box bgg">
+                        </div>
+    
+                        <div class="page_box bgg">
+                        </div>
+    
+                        <div class="page_box2 bgg">
+                        </div>
+    
+                        <div class="page_box2 bgg">
+                        </div>
+    
+                        <div class="page_box3 bgg">
+                        </div>
+    
+                        <div class="page_box3 bgg">
+                        </div>
+
+                        <div class="page_box3 bgg">
+                        </div>
+                    </div>
+                </div>
+                <div class="port_box_left">
+                    <div class="left_box">
+                        <h1>MUSICON</h1>
+                        <div class="button"><a href="#">open website</a></div>
+                    </div>
+                    <div class="left_box">
+                        <div class="next"><span>next</span></div>
+                        <div class="prev"><span>prev</span></div>
+                        <div class="close"><span>close</span></div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="port_box port">
+
+                <div class="port_box_right">
+                    <div class="page2">
+                        <p>악기를 판매하는 쇼핑몰 홈페이지로
+                            처음 제작한 홈페이지 입니다.
+                        </p>
+                        <div class="page_box bg">
+                            <div class="bg_mo"></div>
+                        </div>
+    
+                        <div class="page_box4 bg">
+                              <div class="bg_mo2"></div>
+                        </div>
+    
+                        <div class="page_box2 bg">
+                        </div>
+    
+                        <div class="page_box2 bg">
+                        </div>
+                        
+                        <div class="page_box3 bg11">
+                        </div>
+                        <div class="page_box3 bg11">
+                        </div>
+                        <div class="page_box3 bg11">
+                        </div>
+
+                        <div class="bg_ta">
+                        </div>
+                        <div class="bg_ta">
+                        </div>
+    
+                     
+                    </div>
+                </div>
+                <div class="port_box_left">
+                    <div class="left_box">
+                        <h1>MUSICON</h1>
+                        <div class="button"><a href="#">open website</a></div>
+                    </div>
+                    <div class="left_box">
+                        <div class="next"><span>next</span></div>
+                        <div class="prev"><span>prev</span></div>
+                        <div class="close"><span>close</span></div>
+                    </div>
+                </div>
+            </div>
+
         </section>
 
-        <div class="port_box">
-
-            <div class="port_box_right">
-                <div class="page">
-                    <p>악기를 판매하는 쇼핑몰 홈페이지로
-                        처음 제작한 홈페이지 입니다.
-                    </p>
-                    <div class="page_box bgg">
-
-                    </div>
-
-                    <div class="page_box bgg">
-
-                    </div>
-
-                    <div class="page_box2 bgg">
-
-                    </div>
-
-                    <div class="page_box2 bgg">
-
-                    </div>
-
-                    <div class="page_box3 bgg">
-
-                    </div>
-
-                    <div class="page_box3 bgg">
-
-                    </div>
-
-                    <div class="page_box3 bgg">
-
-                    </div>
-                </div>
-            </div>
-            <div class="port_box_left">
-                <div class="left_box">
-                    <h1>MUSICON</h1>
-                    <div class="button"><a href="#">open website</a></div>
-                </div>
-                <div class="left_box">
-                    <div id="next"><span>next</span></div>
-                    <div id="prev"><span>prev</span></div>
-                    <div id="close"><span>close</span></div>
-                </div>
-            </div>
-        </div>
+      
 
         <div class="about">
             <p>asdf</p>
@@ -119,23 +164,19 @@
         });
 
         $(function () {
-            $('.text>p').click(function () {
-                $('.port_box').css({ transform: 'translate(0)' });
+            
+            $('.text').click(function () {
+                var index=$(this).index();
+                $('.port_box').eq(index).css({ transform: 'translate(0)'});
+                console.log(index);
             });
 
-            $('#close').click(function () {
+            $('.close').click(function () {
                 $('.port_box').css({ transform: 'translate(-100%)' });
             });
 
-                        var pointSize = $(".close").width()/2;
-            $("#wrap").mousemove(function(e){    
-                $('.close').css("top", e.pageY-pointSize);
-                $('.close').css("left", e.pageX-pointSize);
-                $('.close').fadeIn();
-            });
-            $("#wrap").on("mouseleave", function(){
-              $('.close').fadeOut();
-            });
+           
+         
 
             // $(document).mousemove(function (e) {
             //     var mouseX = e.pageX;
