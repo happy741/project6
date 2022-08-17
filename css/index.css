@@ -323,9 +323,6 @@ section {
   height: 350px;
   background-color: aqua;
 }
-.page2 :first-child(2) .bg11 {
-  background-color: red;
-}
 
 .page_box {
   width: 80%;
