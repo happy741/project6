@@ -188,104 +188,6 @@ section {
   color: black;
 }
 
-.bgg:nth-of-type(1) {
-  background-image: url(../img/music1.jpg);
-}
-
-.bgg:nth-of-type(2) {
-  background-image: url(../img/music2.jpg);
-}
-
-.bgg:nth-of-type(3) {
-  background-image: url(../img/music3.jpg);
-}
-
-.bgg:nth-of-type(4) {
-  background-image: url(../img/music4.jpg);
-}
-
-.bgg:nth-of-type(5) {
-  background-image: url(../img/music5.jpg);
-}
-
-.bgg:nth-of-type(6) {
-  background-image: url(../img/music6.jpg);
-}
-
-.bgg:nth-of-type(7) {
-  background-image: url(../img/music7.jpg);
-}
-
-.bgg {
-  background-position: center;
-  background-size: cover;
-}
-
-.bg:nth-of-type(1) {
-  background-image: url(../img/po1.jpg);
-}
-
-.bg:nth-of-type(2) {
-  background-image: url(../img/po2.jpg);
-}
-
-.bg:nth-of-type(3) {
-  background-image: url(../img/po3.jpg);
-}
-
-.bg:nth-of-type(4) {
-  background-image: url(../img/po4.jpg);
-}
-
-.bg:nth-of-type(5) {
-  background-image: url(../img/po5.jpg);
-}
-
-.bg:nth-of-type(6) {
-  background-image: url(../img/po6.jpg);
-}
-
-.bg:nth-of-type(7) {
-  background-image: url(../img/po7.jpg);
-}
-
-.bg {
-  background-size: cover;
-  background-position: center;
-}
-
-.bg_mo {
-  width: 25%;
-  height: 80%;
-  position: absolute;
-  right: -10%;
-  z-index: 9;
-  bottom: -20%;
-  background-image: url(../img/pro2.png);
-  background-size: cover;
-  background-position: center;
-}
-
-.bg_mo2 {
-  width: 20%;
-  height: 80%;
-  position: absolute;
-  top: -30%;
-  z-index: 9;
-  left: -5%;
-  background-image: url(../img/pro4.png);
-  background-size: cover;
-  background-position: center;
-}
-
-.bg_ta {
-  width: 75%;
-  height: 550px;
-  background-image: url("../img/po12.png");
-  background-size: cover;
-  background-position: center;
-}
-
 .page {
   width: 100%;
   height: 2000px;
@@ -303,28 +205,46 @@ section {
   height: 4500px;
   background-color: cornsilk;
   color: #333;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: row;
-  flex-wrap: wrap;
 }
-.page2 .page_box2 {
-  width: 45%;
-  height: 500px;
-  background-color: blue;
-}
-.page2 .page_box2 img {
+
+#music {
   width: 100%;
-  height: 100%;
+  height: 4700px;
+  background-image: url("../img/musicon.jpg");
+  background-size: cover;
+  background-position: center;
 }
-.page2 .page_box3 {
-  width: 20%;
-  height: 350px;
-  background-color: aqua;
+
+#urban {
+  width: 100%;
+  height: 4600px;
+  background-image: url("../img/urban.jpg");
+  background-size: cover;
+  background-position: center;
 }
-.page2 :first-child(2) .bg11 {
-  background-color: red;
+
+#urban2 {
+  width: 100%;
+  height: 1700px;
+  background-image: url("../img/urban1.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#quantic {
+  width: 100%;
+  height: 5500px;
+  background-image: url("../img/q1.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#quantic2 {
+  width: 100%;
+  height: 3000px;
+  background-image: url("../img/q2.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
 .page_box {
