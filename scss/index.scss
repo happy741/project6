@@ -1,0 +1,418 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css?family=Black+Han+Sans:400');
+@import url('https://fonts.googleapis.com/css?family=Black+Han+Sans&display=swap&subset=korean');
+
+
+
+// font-family: 'Black Han Sans', 'sans-serif';
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+$w: 100vw;
+$t: 0.3s ease;
+$c: pointer;
+
+@mixin flex($flex, $js, $ali, $row) {
+    display: $flex;
+    justify-content: $js;
+    align-items: $ali;
+    flex-direction: $row;
+    @content;
+}
+
+@mixin bg($url, $size, $po) {
+    background-image: url($url);
+    background-size: $size;
+    background-position: $po;
+    @content
+};
+
+@mixin main($bcolor, $url, $x1, $y1, $col) {
+    background: $bcolor;
+    -webkit-mask: url($url);
+    mask: url($url);
+    -webkit-mask-size: $x1 $y1;
+    mask-size: $x1 $y1;
+    color: $col;
+}
+
+header {
+    width: $w;
+    height: 100vh;
+    background-color: antiquewhite;
+    @include flex(flex, space-between, flex-end, column);
+    @include main(bage, "https://raw.githubusercontent.com/pizza3/asset/master/natureSmaller.png", 7100%, 100%, #333);
+
+    animation: ani2 1.5s steps(70) forwards;
+
+}
+
+h1 {
+    font: {
+        family: 'Black Han Sans', 'sans-serif';
+        size: 10.5vw;
+
+    }
+
+}
+
+
+
+
+section {
+    width: $w;
+    height: 4000px;
+    position:relative;
+
+    color: white;
+
+}
+
+#sec_box{
+    width:100%;
+    height:2040px;
+    transition: 1s linear;
+    top:-121.8%;
+    @include bg('../img/3tv.png',cover, flex-start);
+    @include flex(flex, center, flex-start, column);
+ 
+    position:sticky;
+
+   
+}
+.video{
+    width:306px;
+    height:235px;
+
+    position:absolute;
+    top:74.5%;
+    left:42%;
+    z-index: -999;
+    img{
+        width:100%;
+        height:100%;
+    }
+}
+.text {
+    overflow: hidden;
+    transition: $t;
+    cursor: $c;
+
+    p {
+        transition:$t;
+        position: relative;
+
+        font: {
+            family: 'Black Han Sans', 'sans-serif';
+            size: 4.5vw;
+
+        }
+
+
+
+
+    }
+
+
+
+    &:hover p {
+        transform: translateY(-90%);
+    }
+
+}
+
+#sec_text {
+    height: 779px;
+    @include flex(flex, space-around, flex-start, column);
+    position:absolute;
+    z-index: 4;
+    top:40%;
+    :first-child {
+        p::before {
+            content: 'MUSIC ON';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            font-size: 4.5vw;
+            transform: translateY(90%);
+            transition: $t;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    }
+
+    :nth-child(2) {
+        p::before {
+            content: 'URBAN PHOTO';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            font-size: 4.5vw;
+            transform: translateY(90%);
+            transition: $t;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    }
+
+    :nth-child(3) {
+        p::before {
+            content: 'QUANTIC DREAM';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            font-size: 4.5vw;
+            transform: translateY(90%);
+            transition: $t;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    }
+
+    :nth-child(4) {
+        p::before {
+            content: 'POKEMON';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            font-size: 4.5vw;
+            transform: translateY(90%);
+            transition: $t;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    }
+
+    :nth-child(5) {
+        p::before {
+            content: "BANDI&LUNI'S";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            font-size: 4.5vw;
+            transform: translateY(90%);
+            transition: $t;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    }
+
+
+}
+.port_box{
+    width:100vw;
+    height:100%;
+
+    z-index: 5;
+    transition:$t;
+    position:fixed;
+    top:0;
+    transform: translateX(-100%);
+
+}
+.port_box_left{
+    width:37%;
+    height:100%;
+    float:right;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    h1{
+        font-size: 5vw;
+    }
+    span{
+        font-size: 1.5vw;
+    }
+    .button{
+        width:200px;
+        height:50px;
+        border-radius: 30px;
+        transition:$t;
+        border:1px solid black;
+        background-color: none;
+        @include flex(flex,center,center,row);
+        a{
+            color:black;
+            text-decoration: none;
+        }
+        &:hover{
+            background-color: white;
+            border:1px solid white;
+        }
+
+        &:hover a{
+            color:black;
+        }
+    }
+}
+
+
+
+.page{
+    width:100%;
+    height:2000px;
+    background-color: cornsilk;
+    color:#333;
+    @include flex(flex,space-around,center,row)
+    {flex-wrap: wrap};
+
+}
+
+.page2{
+    width:100%;
+    height:4500px;
+    background-color: cornsilk;
+    color:#333;
+<<<<<<< HEAD
+
+=======
+    @include flex(flex,space-around,center,row)
+    {flex-wrap: wrap};
+    .page_box2{
+        width:45%;
+        height:500px;
+        background-color: blue;
+        img{
+            width:100%;
+            height:100%;
+        }
+    }
+    .page_box3{
+        width:20%;
+        height:350px;
+        background-color: aqua;
+    }
+ 
+>>>>>>> 89a8ae1a5de4025a36a4b67d67bc5a98623493aa
+}
+#music{
+    width:100%;
+    height:4700px;
+    @include bg('../img/musicon.jpg',cover,center);
+}
+#urban{
+    width:100%;
+    height:4600px;
+    @include bg('../img/urban.jpg',cover,center);
+  
+  
+
+
+}
+#urban2{
+    width:100%;
+    height:1700px;
+    @include bg('../img/urban1.jpg',cover,center);
+ 
+}
+
+#quantic{
+    width:100%;
+    height:5500px;
+    @include bg('../img/q1.jpg',cover,center);
+  }
+
+  #quantic2{
+    width:100%;
+    height:3000px;
+    @include bg('../img/q2.jpg',cover,center);
+  }
+.page_box{
+    width:80%;
+    height:487px;
+    background-color: brown;
+    position:relative;
+}
+.page_box2{
+    width:40%;
+    height:300px;
+    background-color: blue;
+    img{
+        width:100%;
+        height:100%;
+    }
+}
+.page_box4{
+    width:91%;
+    height:495px;
+    position:relative;
+    background-color: blue;
+    img{
+        width:100%;
+        height:100%;
+    }
+}
+
+.page_box3{
+    width:30%;
+    height:300px;
+    background-size: cover;
+    background-position: 20%,20%;
+}
+
+.port_box_right::-webkit-scrollbar {display: none;}
+.port_box_right{
+    width:60%;
+    height:100%;
+    overflow: scroll;
+    position:absolute;
+
+
+}
+
+
+
+.sc1{
+   transform:translate3d(0px,-740px,0px) scale(2);
+}
+
+.sc2{
+    transform:translate3d(0px,-1315px,0px) scale(3);
+  
+}
+
+.sc3{
+    transform:scale(3.5) rotate(-5deg) translate3d(0px,-459px,0px);
+ 
+}
+
+.sc4{
+    transform:scale(5) rotate(-10deg) translate3d(-23px,-499px,0px);;
+ 
+}
+
+.sc5{
+    transform:scale(7) rotate(-10deg) translate3d(-23px,-516px,0px);;
+ 
+}
+.sc6{
+    transform:scale(7) rotate(-10deg) translate3d(-23px,-516px,0px);;
+    display: none;
+}
+.about{
+    width:100%;
+    height:1000px;
+    background-color: darkgreen;
+    margin-top:-45%;
+    position:absolute;
+    z-index: -1;
+}
+
+
+
+
+
+
+
+@keyframes ani2 {
+    from {
+        -webkit-mask-position: 100% 0;
+        mask-position: 100% 0;
+    }
+
+    to {
+        -webkit-mask-position: 0 0;
+        mask-position: 0 0;
+    }
+}

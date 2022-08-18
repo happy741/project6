@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <title>Document</title>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
+
+</head>
+
+<body>
+
+    <div id="wrap">
+
+        <header>
+            <h1>HWANG GI BBEUM</h1>
+            <H1>PORTFOLIO</H1>
+        </header>
+        <section>
+
+           
+            <div id="sec_text">
+                <div class="text">
+                    <p>MUSIC ON</p>
+                </div>
+                <div class="text">
+                    <p>URBAN PHOTO</p>
+                </div>
+                <div class="text">
+                    <p>QUANTIC DREAM</p>
+                </div>
+                <div class="text">
+                    <p>POKEMON</p>
+                </div>
+                <div class="text">
+                    <p>BANDI&LUNI'S</p>
+                </div>
+            </div>
+            <div id="sec_box">
+                <div class="video">
+                    <!-- <img src="img/noise.png" alt=""> -->
+                </div>
+            </div>
+
+            <div class="port_box">
+
+                <div class="port_box_right">
+                    <div class="page">
+                        <p></p>
+                        <div id="music">
+                         
+                        </div>
+                    </div>
+                </div>
+                <div class="port_box_left">
+                    <div class="left_box">
+                        <h1>MUSICON</h1>
+                        <div class="button"><a href="#">open website</a>
+                        </div>
+                        <P>HTML과 CSS를 배우며 처음 만든 페이지이며</P>
+                    </div>
+                    <div class="left_box">
+                        <div class="next"><span>next</span></div>
+                        <div class="prev"><span>prev</span></div>
+                        <div class="close"><span>close</span></div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="port_box port">
+
+                <div class="port_box_right">
+                    <div class="page2">
+                        <p></p>
+                        <div id="urban">
+          
+                        </div>
+                        <div id="urban2">
+                       
+                        </div>
+                    </div>
+    
+                     
+                  
+                </div>
+                <div class="port_box_left">
+                    <div class="left_box">
+                        <h1>URBAN PHOTO</h1>
+                        <div class="button"><a href="#">open website</a></div>
+                    </div>
+                    <div class="left_box">
+                        <div class="next"><span>next</span></div>
+                        <div class="prev"><span>prev</span></div>
+                        <div class="close"><span>close</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="port_box port">
+
+                <div class="port_box_right">
+                    <div class="page2">
+                        <p></p>
+                        <div id="quantic"></div>
+                        <div id="quantic2"></div>
+                    </div>
+    
+                     
+                  
+                </div>
+                <div class="port_box_left">
+                    <div class="left_box">
+                        <h1>QUANTIC DREAM</h1>
+                        <div class="button"><a href="#">open website</a></div>
+                    </div>
+                    <div class="left_box">
+                        <div class="next"><span>next</span></div>
+                        <div class="prev"><span>prev</span></div>
+                        <div class="close"><span>close</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+      
+
+        <div class="about">
+            <p>asdf</p>
+
+            <p>asdf</p>
+
+            <p>sdafsdfs</p>
+        </div>
+    </div>
+
+    <script>
+        //       $(window).scroll(function () { 
+        // 	var scroll = window.scrollY;
+        //     console.log(scroll); 
+        // });3617
+
+
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                $('#sec_box').css("opacity", 0 + $(window).scrollTop() / 800)
+            })
+        });
+
+        $(function () {
+            
+            $('.text').click(function () {
+                var index=$(this).index();
+                $('.port_box').eq(index).css({ transform: 'translate(0)'});
+                console.log(index);
+            });
+
+            $('.close').click(function () {
+                $('.port_box').css({ transform: 'translate(-100%)' });
+            });
+
+           
+         
+
+            // $(document).mousemove(function (e) {
+            //     var mouseX = e.pageX;
+            //     var mouseY = e.pageY;
+
+            //     $('.close').css({
+            //         left: mouseX + "px",
+            //         top: mouseY + "px"
+            //     })
+            // })
+
+        });
+
+
+
+        window.addEventListener("scroll", function () {
+            var scroll11 = window.scrollY;
+            console.log(scroll11);
+            var bg = document.getElementById('sec_box');
+
+            if (scroll11 > 3417) { bg.classList.add('sc1') } else {
+                bg.classList.remove('sc1');
+            };
+
+            if (scroll11 > 3517) { bg.classList.add('sc2') } else {
+                bg.classList.remove('sc2');
+            };
+            if (scroll11 > 3617) { bg.classList.add('sc3') } else {
+                bg.classList.remove('sc3');
+            };
+            if (scroll11 > 3717) { bg.classList.add('sc4') } else {
+                bg.classList.remove('sc4');
+            };
+            if (scroll11 > 3817) { bg.classList.add('sc5') } else {
+                bg.classList.remove('sc5');
+            };
+            if (scroll11 > 3917) { bg.classList.add('sc6') } else {
+                bg.classList.remove('sc6');
+            };
+            if (scroll11 > 4017) { bg.style.display='none' } else {
+                bg.style.display='block'
+            };
+        });
+
+    
+    </script>
+</body>
+
+</html>
