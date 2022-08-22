@@ -54,6 +54,7 @@ section {
 .video {
   width: 306px;
   height: 235px;
+  background-color: aqua;
   position: absolute;
   top: 74.5%;
   left: 42%;
@@ -149,6 +150,11 @@ section {
   top: 0;
   transform: translateX(-100%);
 }
+.port_box:nth-of-type(2) .music {
+  background-image: url("../img/urban.jpg");
+  background-size: cover;
+  background-position: center;
+}
 
 .port_box_left {
   width: 37%;
@@ -205,14 +211,30 @@ section {
   height: 4500px;
   background-color: cornsilk;
   color: #333;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.page2 .page_box2 {
+  width: 45%;
+  height: 500px;
+  background-color: blue;
+}
+.page2 .page_box2 img {
+  width: 100%;
+  height: 100%;
+}
+.page2 .page_box3 {
+  width: 20%;
+  height: 350px;
+  background-color: aqua;
 }
 
-#music {
+.music {
   width: 100%;
   height: 4700px;
-  background-image: url("../img/musicon.jpg");
-  background-size: cover;
-  background-position: center;
 }
 
 #urban {
@@ -222,7 +244,6 @@ section {
   background-size: cover;
   background-position: center;
 }
-<<<<<<< HEAD
 
 #urban2 {
   width: 100%;
@@ -247,8 +268,6 @@ section {
   background-size: cover;
   background-position: center;
 }
-=======
->>>>>>> 89a8ae1a5de4025a36a4b67d67bc5a98623493aa
 
 .page_box {
   width: 80%;

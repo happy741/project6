@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/index.css">
     <title>Document</title>
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
 </head>
 
@@ -44,8 +45,11 @@
                     <!-- <img src="img/noise.png" alt=""> -->
                 </div>
             </div>
+            <section_com></section_com>
+            <section_com></section_com>
+            <section_com></section_com>
 
-            <div class="port_box">
+            <!-- <div class="port_box">
 
                 <div class="port_box_right">
                     <div class="page">
@@ -68,10 +72,10 @@
                         <div class="close"><span>close</span></div>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
 
-            <div class="port_box port">
+            <!-- <div class="port_box port">
 
                 <div class="port_box_right">
                     <div class="page2">
@@ -98,9 +102,9 @@
                         <div class="close"><span>close</span></div>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
-            <div class="port_box port">
+            <!-- <div class="port_box port">
 
                 <div class="port_box_right">
                     <div class="page2">
@@ -123,7 +127,7 @@
                         <div class="close"><span>close</span></div>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </section>
 
       
@@ -206,6 +210,38 @@
             if (scroll11 > 4017) { bg.style.display='none' } else {
                 bg.style.display='block'
             };
+        });
+
+        Vue.component('section_com',{
+            template: 
+                `<div class="port_box">
+
+                    <div class="port_box_right">
+                        <div class="page">
+                            <p></p>
+                            <div class="music">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="port_box_left">
+                        <div class="left_box">
+                            <h1>MUSICON</h1>
+                            <div class="button"><a href="#">open website</a>
+                            </div>
+                            <P>HTML과 CSS를 배우며 처음 만든 페이지이며</P>
+                        </div>
+                        <div class="left_box">
+                            <div class="next"><span>next</span></div>
+                            <div class="prev"><span>prev</span></div>
+                            <div class="close"><span>close</span></div>
+                        </div>
+                    </div>
+                </div>`
+
+        });
+        new Vue({
+            el:'section'
         });
 
     
