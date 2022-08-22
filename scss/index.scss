@@ -85,41 +85,37 @@ section {
 
    
 }
-.video{
+.video_box{
+    overflow: hidden;
     width:306px;
     height:235px;
-    background-color: aqua;
-    position:absolute;
     top:74.5%;
     left:42%;
+    position:absolute;
+}
+.video{
+    width:200%;
+    height:200%;
+    transform: scale(1.1);
     z-index: -999;
-    img{
-        width:100%;
-        height:100%;
-    }
+    @include bg('../img/noise.png',cover,center);
 }
 .text {
     overflow: hidden;
     transition: $t;
     cursor: $c;
-
     p {
         transition:$t;
         position: relative;
-
         font: {
             family: 'Black Han Sans', 'sans-serif';
             size: 4.5vw;
-
         }
-
-
-
-
     }
 
-
-
+    &:hover .video{
+        transform: translateX(45px) !important
+    }
     &:hover p {
         transform: translateY(-90%);
     }
@@ -132,6 +128,7 @@ section {
     position:absolute;
     z-index: 4;
     top:40%;
+   
     :first-child {
         p::before {
             content: 'MUSIC ON';
@@ -143,6 +140,7 @@ section {
             transition: $t;
             font-family: Arial, Helvetica, sans-serif;
         }
+        
     }
 
     :nth-child(2) {
@@ -209,12 +207,6 @@ section {
     top:0;
     transform: translateX(-100%);
 
-    &:nth-of-type(2){
-        .music{
-            @include bg('../img/urban.jpg',cover,center);
-        }
-    }
-
 }
 .port_box_left{
     width:37%;
@@ -257,7 +249,7 @@ section {
 
 .page{
     width:100%;
-    height:2000px;
+    height:auto;
     background-color: cornsilk;
     color:#333;
     @include flex(flex,space-around,center,row)
@@ -265,9 +257,10 @@ section {
 
 }
 
+
 .page2{
     width:100%;
-    height:4500px;
+    height:auto;
     background-color: cornsilk;
     color:#333;
 
@@ -294,69 +287,23 @@ section {
 }
 .music{
     width:100%;
-    height:4700px;
-    // @include bg('../img/musicon.jpg',cover,center);
+    height:auto;
+    background-size: cover;
+    background-position: center;
 }
-#urban{
+.music1{
     width:100%;
-    height:4600px;
-    @include bg('../img/urban.jpg',cover,center);
-  
-  
-
-
-}
-#urban2{
-    width:100%;
-    height:1700px;
-    @include bg('../img/urban1.jpg',cover,center);
- 
+    height:auto;
+    background-size: cover;
+    background-position: center;
 }
 
-#quantic{
-    width:100%;
-    height:5500px;
-    @include bg('../img/q1.jpg',cover,center);
-  }
-
-  #quantic2{
-    width:100%;
-    height:3000px;
-    @include bg('../img/q2.jpg',cover,center);
-  }
 .page_box{
     width:80%;
     height:487px;
     background-color: brown;
     position:relative;
 }
-.page_box2{
-    width:40%;
-    height:300px;
-    background-color: blue;
-    img{
-        width:100%;
-        height:100%;
-    }
-}
-.page_box4{
-    width:91%;
-    height:495px;
-    position:relative;
-    background-color: blue;
-    img{
-        width:100%;
-        height:100%;
-    }
-}
-
-.page_box3{
-    width:30%;
-    height:300px;
-    background-size: cover;
-    background-position: 20%,20%;
-}
-
 .port_box_right::-webkit-scrollbar {display: none;}
 .port_box_right{
     width:60%;
@@ -364,9 +311,7 @@ section {
     overflow: scroll;
     position:absolute;
 
-
 }
-
 
 
 .sc1{
@@ -403,6 +348,17 @@ section {
     margin-top:-45%;
     position:absolute;
     z-index: -1;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.photo,.skill{
+    width:50%;
+    height:700px;
+    background-color: antiquewhite;
+}
+.photo{
+    
 }
 
 
@@ -420,5 +376,17 @@ section {
     to {
         -webkit-mask-position: 0 0;
         mask-position: 0 0;
+    }
+}
+
+@keyframes noise {
+    0%{
+        transform: translateY(5px);
+    }
+    50%{
+        transform: translateY(-5px);
+    }
+    100%{
+        transform: translateY(5px);
     }
 }

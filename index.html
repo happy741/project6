@@ -41,10 +41,13 @@
                 </div>
             </div>
             <div id="sec_box">
+                <div class="video_box">
                 <div class="video">
                     <!-- <img src="img/noise.png" alt=""> -->
                 </div>
             </div>
+            </div>
+            <section_com></section_com>
             <section_com></section_com>
             <section_com></section_com>
             <section_com></section_com>
@@ -133,11 +136,11 @@
       
 
         <div class="about">
-            <p>asdf</p>
+            <h1>About Me</h1>
+            <div class="photo">
 
-            <p>asdf</p>
-
-            <p>sdafsdfs</p>
+            </div>
+            <div class="skill"></div>
         </div>
     </div>
 
@@ -182,7 +185,6 @@
         });
 
 
-
         window.addEventListener("scroll", function () {
             var scroll11 = window.scrollY;
             console.log(scroll11);
@@ -217,19 +219,24 @@
                 `<div class="port_box">
 
                     <div class="port_box_right">
-                        <div class="page">
-                            <p></p>
-                            <div class="music">
-
-                            </div>
+                     <div class='page'>  
+                       <p></p>
+                       <div class="music">
+                        <img src="#" alt="#" class="image">
+                        <img src="#" alt="#" class="image1">
                         </div>
+                       <div class="music1">
+                        
+                        </div>
+                    </div>
                     </div>
                     <div class="port_box_left">
                         <div class="left_box">
                             <h1>MUSICON</h1>
                             <div class="button"><a href="#">open website</a>
                             </div>
-                            <P>HTML과 CSS를 배우며 처음 만든 페이지이며</P>
+                            <P>HTML과 CSS를 배우며 처음 만든 페이지이며<br>
+                                여러가지 악기들과 LP를 판매하는 사이트입니다.</P>
                         </div>
                         <div class="left_box">
                             <div class="next"><span>next</span></div>
@@ -244,7 +251,21 @@
             el:'section'
         });
 
-    
+        var music=document.getElementsByClassName('music');
+        var music1=document.getElementsByClassName('music1');
+        $('.image').eq(0).attr('src','img/musicon.jpg');
+        $('.image').eq(1).attr('src','img/urban.jpg');
+        $('.image1').eq(1).attr('src','img/urban1.jpg');
+        $('.image').eq(2).attr('src','img/q1.jpg');
+        $('.image1').eq(2).attr('src','img/q2.jpg');
+        $('.image').eq(3).attr('src','img/poke1.jpg');
+        $('.image1').eq(3).attr('src','img/poke2.jpg');
+        $(function(){
+            $('.text').hover(function(){
+                $('.video').css({animation:'noise 1s ease'});
+            },function(){});
+        })
+        
     </script>
 </body>
 
