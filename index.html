@@ -22,7 +22,7 @@
         </header>
         <section>
 
-           
+
             <div id="sec_text">
                 <div class="text">
                     <p>MUSIC ON</p>
@@ -42,10 +42,10 @@
             </div>
             <div id="sec_box">
                 <div class="video_box">
-                <div class="video">
-                    <!-- <img src="img/noise.png" alt=""> -->
+                    <div class="video video1">
+                        <!-- <img src="img/noise.png" alt=""> -->
+                    </div>
                 </div>
-            </div>
             </div>
             <section_com></section_com>
             <section_com></section_com>
@@ -133,14 +133,33 @@
             </div> -->
         </section>
 
-      
+
 
         <div class="about">
             <h1>About Me</h1>
             <div class="photo">
+                <div class="photo2"></div>
+                <div class="my1 my">
+                  HWAING GI BBEUM<br>
+                  황기쁨<br>
 
+                  <button>Download CV</button>
+                </div>
+                <div class="my1">
+                    <p>BIRTH: 1998.03.27</p>
+                    <p>PHONE: 010-8595-9432</p>
+                    <P>E-MAIL: llpl1402@naver.com</P>
+                    <p>HOME:경기도 안산시</p>
+
+                    <p>HISTORY: 2020.03 ~ 2020.09 연세드림치과<BR>
+                        2020.09 ~ 2022.09 서울아라치과</p>
+                    
+                </div>
             </div>
-            <div class="skill"></div>
+         
+            <div class="skill">
+                <h1>skill</h1>
+            </div>
         </div>
     </div>
 
@@ -158,10 +177,10 @@
         });
 
         $(function () {
-            
+
             $('.text').click(function () {
-                var index=$(this).index();
-                $('.port_box').eq(index).css({ transform: 'translate(0)'});
+                var index = $(this).index();
+                $('.port_box').eq(index).css({ transform: 'translate(0)' });
                 console.log(index);
             });
 
@@ -169,8 +188,8 @@
                 $('.port_box').css({ transform: 'translate(-100%)' });
             });
 
-           
-         
+
+
 
             // $(document).mousemove(function (e) {
             //     var mouseX = e.pageX;
@@ -209,13 +228,13 @@
             if (scroll11 > 3917) { bg.classList.add('sc6') } else {
                 bg.classList.remove('sc6');
             };
-            if (scroll11 > 4017) { bg.style.display='none' } else {
-                bg.style.display='block'
+            if (scroll11 > 4017) { bg.style.display = 'none' } else {
+                bg.style.display = 'block'
             };
         });
 
-        Vue.component('section_com',{
-            template: 
+        Vue.component('section_com', {
+            template:
                 `<div class="port_box">
 
                     <div class="port_box_right">
@@ -232,7 +251,7 @@
                     </div>
                     <div class="port_box_left">
                         <div class="left_box">
-                            <h1>MUSICON</h1>
+                            <h1></h1>
                             <div class="button"><a href="#">open website</a>
                             </div>
                             <P>HTML과 CSS를 배우며 처음 만든 페이지이며<br>
@@ -248,24 +267,65 @@
 
         });
         new Vue({
-            el:'section'
+            el: 'section'
         });
 
-        var music=document.getElementsByClassName('music');
-        var music1=document.getElementsByClassName('music1');
-        $('.image').eq(0).attr('src','img/musicon.jpg');
-        $('.image').eq(1).attr('src','img/urban.jpg');
-        $('.image1').eq(1).attr('src','img/urban1.jpg');
-        $('.image').eq(2).attr('src','img/q1.jpg');
-        $('.image1').eq(2).attr('src','img/q2.jpg');
-        $('.image').eq(3).attr('src','img/poke1.jpg');
-        $('.image1').eq(3).attr('src','img/poke2.jpg');
+        var music = document.getElementsByClassName('music');
+        var music1 = document.getElementsByClassName('music1');
+        $('.image').eq(0).attr('src', 'img/musicon.jpg');
+        $('.image').eq(1).attr('src', 'img/urban.jpg');
+        $('.image1').eq(1).attr('src', 'img/urban1.jpg');
+        $('.image').eq(2).attr('src', 'img/q1.jpg');
+        $('.image1').eq(2).attr('src', 'img/q2.jpg');
+        $('.image').eq(3).attr('src', 'img/poke1.jpg');
+        $('.image1').eq(3).attr('src', 'img/poke2.jpg');
+
+
+
         $(function(){
             $('.text').hover(function(){
-                $('.video').css({animation:'noise 1s ease'});
-            },function(){});
+                $('.video').removeClass('video1');
+                $('.video').addClass('video2'),function(){
+                    $('.video').css({backgroundImage:'url(img/q1.jpg'});
+                };
+            },function(){
+                $('.video').removeClass('video2');
+                $('.video').addClass('video1');
+            });
         })
+
+
+
+ 
+
+        // text.addEventListener('mouseover',function(){
+        //     var text = document.querySelectorAll('.text');
+        // var tv = document.getElementsByClassName('video');
+        //    for (var i = 0; i < text.length; i++) {
+        //         tv[i].classList.remove('video1');
+        //         tv[i].classList.add('video2');
         
+        // }
+        // })
+
+
+        // for (var i = 0; i < text.length; i++) {
+        //     text[i].addEventListener('mouseover', function () {
+        //         tv[i].classList.remove('video1');
+        //         tv[i].classList.add('video2');
+
+        //     })
+        // }
+        // for (var i = 0; i < text.length; i++) {
+        //     text[i].addEventListener('mouseleave', function () {
+        //         tv[i].classList.remove('video2');
+        //         tv[i].classList.add('video1');
+
+        //     })
+
+        // }
+
+
     </script>
 </body>
 
