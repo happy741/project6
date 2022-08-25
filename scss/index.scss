@@ -6,7 +6,8 @@
 
 
 // font-family: 'Black Han Sans', 'sans-serif';
-
+// font-family: 'LeferiPoint-WhiteObliqueA'
+// font-family: 'Pretendard-Regular';
 
 * {
     margin: 0;
@@ -16,7 +17,7 @@
 $w: 100vw;
 $t: 0.3s ease;
 $c: pointer;
-
+p{font-family: 'Pretendard-Regular';}
 @mixin flex($flex, $js, $ali, $row) {
     display: $flex;
     justify-content: $js;
@@ -48,7 +49,7 @@ header {
     @include flex(flex, space-between, flex-end, column);
     @include main(bage, "https://raw.githubusercontent.com/pizza3/asset/master/natureSmaller.png", 7100%, 100%, #333);
 
-    animation: ani2 1.5s steps(70) forwards;
+    animation: ani2 2s steps(70) forwards;
 
 }
 
@@ -82,10 +83,27 @@ section {
     @include flex(flex, center, flex-start, column);
  
     position:sticky;
-
+    :nth-of-type(4){
+        @include bg('../img/m1.jpg',cover,center);
+        display: none;
+    
+    }
+    :nth-of-type(5){
+        @include bg('../img/p1.jpg',cover,center);
+        display: none;
+    }
+    :nth-of-type(6){
+        @include bg('../img/d1.jpg',cover,center);
+        display: none;
+    }
+      :nth-of-type(7){
+        @include bg('../img/po1.jpg',cover,center);
+        display: none;
+    }
    
 }
 .video{
+
     width:100%;
     height:100%;
     @include bg('../img/display_sp.png',cover,center);
@@ -102,7 +120,8 @@ section {
     width:100%;
     height:100%;
     @include bg('../img/noise.png',cover,center);
-    animation:glitch 3s linear;
+    animation:glitch 1s linear;
+    display: none;
 
     &:after{
         position:absolute;
@@ -119,13 +138,16 @@ section {
         width:20em;
         height:10em;
         transform: translate(0em,3em);
-        animation:glitch-before 2s infinite;
+        animation:glitch-before 1s infinite;
     }
 }
-.video3{
-    @include bg('../img/q1.jpg',cover,center);
-}
 
+.ttv{ 
+    width:100%;
+    height:100%;
+    z-index: 999;
+    display: none;
+}
 .text {
     overflow: hidden;
     transition: $t;
@@ -228,7 +250,7 @@ section {
     height:100%;
 
     z-index: 5;
-    transition:$t;
+    transition:1s ease;
     position:fixed;
     top:0;
     transform: translateX(-100%);
@@ -374,9 +396,7 @@ section {
     margin-top:-45%;
     position:absolute;
     z-index: -1;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+ @include flex(flex,center,center,column);
 }
 
 .photo{
@@ -385,10 +405,43 @@ section {
     background-color: antiquewhite;
 }
 .skill{
+    @include flex(flex,space-around,center,row){
+        flex-wrap: wrap;
+    };
     width:50%;
     height:400px;
     background-color: aqua;
    
+}
+@for $i from 1 through 12{
+    .skill_icon:nth-of-type(#{$i}){
+        background-image: url(../img/s#{$i}.png);
+    }
+}
+.skill_icon{
+    border-radius: 50%;
+    background:linear-gradient(45deg,rgb(187, 84, 84),transparent);
+    width:150px;
+    height:150px;
+    background-color: antiquewhite;
+    background-position: center;
+    background-size: 80%,80%;
+    background-repeat: no-repeat;
+    position:relative;
+    overflow: hidden;
+    &::after{
+        content:'';
+        width:250px;
+        height:250px;
+        position:absolute;
+        top:0;
+        left:0%;
+        margin-left:-50px;
+        margin-top:-200px;
+        border-radius: 35%;
+        background: rgba(255,255,255,.75);
+        animation:wave 10s infinite linear;
+    }
 }
 .photo{
     mask: url(../svg/svg1.svg);
@@ -406,10 +459,12 @@ section {
     }
     p{
         font-size: 20px;
+
     }
 }
 .my{
     font-size: 50px;
+
 }
 .photo2{
     width:14vw;
@@ -466,4 +521,11 @@ section {
       -0.3em 0 0 0 red,
       0.3em 0 0 0 yellow}
   }
+
+  @keyframes wave {
+    from { transform: rotate(0deg);}
+    from { transform: rotate(360deg);}
+  }
+
+
   

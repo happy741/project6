@@ -43,94 +43,21 @@
             <div id="sec_box">
                 <div class="video_box">
                     <div class="video video1">
-                        <!-- <img src="img/noise.png" alt=""> -->
                     </div>
+                    <div class="video2">
+                    </div>
+                    <div class="video3">
+                    </div>
+                    <div class="ttv"></div>
+                    <div class="ttv"></div>
+                    <div class="ttv"></div>
+                    <div class="ttv"></div>
                 </div>
             </div>
             <section_com></section_com>
             <section_com></section_com>
             <section_com></section_com>
             <section_com></section_com>
-
-            <!-- <div class="port_box">
-
-                <div class="port_box_right">
-                    <div class="page">
-                        <p></p>
-                        <div id="music">
-                         
-                        </div>
-                    </div>
-                </div>
-                <div class="port_box_left">
-                    <div class="left_box">
-                        <h1>MUSICON</h1>
-                        <div class="button"><a href="#">open website</a>
-                        </div>
-                        <P>HTML과 CSS를 배우며 처음 만든 페이지이며</P>
-                    </div>
-                    <div class="left_box">
-                        <div class="next"><span>next</span></div>
-                        <div class="prev"><span>prev</span></div>
-                        <div class="close"><span>close</span></div>
-                    </div>
-                </div>
-            </div> -->
-
-
-            <!-- <div class="port_box port">
-
-                <div class="port_box_right">
-                    <div class="page2">
-                        <p></p>
-                        <div id="urban">
-          
-                        </div>
-                        <div id="urban2">
-                       
-                        </div>
-                    </div>
-    
-                     
-                  
-                </div>
-                <div class="port_box_left">
-                    <div class="left_box">
-                        <h1>URBAN PHOTO</h1>
-                        <div class="button"><a href="#">open website</a></div>
-                    </div>
-                    <div class="left_box">
-                        <div class="next"><span>next</span></div>
-                        <div class="prev"><span>prev</span></div>
-                        <div class="close"><span>close</span></div>
-                    </div>
-                </div>
-            </div> -->
-
-            <!-- <div class="port_box port">
-
-                <div class="port_box_right">
-                    <div class="page2">
-                        <p></p>
-                        <div id="quantic"></div>
-                        <div id="quantic2"></div>
-                    </div>
-    
-                     
-                  
-                </div>
-                <div class="port_box_left">
-                    <div class="left_box">
-                        <h1>QUANTIC DREAM</h1>
-                        <div class="button"><a href="#">open website</a></div>
-                    </div>
-                    <div class="left_box">
-                        <div class="next"><span>next</span></div>
-                        <div class="prev"><span>prev</span></div>
-                        <div class="close"><span>close</span></div>
-                    </div>
-                </div>
-            </div> -->
         </section>
 
 
@@ -156,9 +83,20 @@
                     
                 </div>
             </div>
-         
+            <h1>skill</h1>
             <div class="skill">
-                <h1>skill</h1>
+                <div class="skill_icon"></div>
+                <div class="skill_icon"></div>
+                <div class="skill_icon"></div>
+                <div class="skill_icon"></div>
+                <div class="skill_icon"></div>
+                <div class="skill_icon"></div>
+                <div class="skill_icon"></div>
+                <div class="skill_icon"></div>
+                <div class="skill_icon"></div>
+                <div class="skill_icon"></div>
+                <div class="skill_icon"></div>
+                <div class="skill_icon"></div>
             </div>
         </div>
     </div>
@@ -173,6 +111,7 @@
         $(document).ready(function () {
             $(window).scroll(function () {
                 $('#sec_box').css("opacity", 0 + $(window).scrollTop() / 800)
+                $('.video').css("opacity", 3 - $(window).scrollTop() / 1800)
             })
         });
 
@@ -180,27 +119,29 @@
 
             $('.text').click(function () {
                 var index = $(this).index();
-                $('.port_box').eq(index).css({ transform: 'translate(0)' });
+                $('.port_box').eq(index).css({ transform: 'translate(0)' },);
                 console.log(index);
+                $('.next').click(function () {
+                    if (index > 4) {
+                        index = 4;
+                    }
+                    $('.port_box').css({ transform: 'translate(-100%)' });
+                    $('.port_box').eq(index ++).css({ transform: 'translate(0)' });
+
+                });
+                $('.prev').click(function(){
+                    if(index<0){
+                        index=0;
+                    }
+                    $('.port_box').css({ transform: 'translate(-100%)' });
+                    $('.port_box').eq(index--).css({ transform: 'translate(0)' });
+                });
             });
+         
 
             $('.close').click(function () {
                 $('.port_box').css({ transform: 'translate(-100%)' });
             });
-
-
-
-
-            // $(document).mousemove(function (e) {
-            //     var mouseX = e.pageX;
-            //     var mouseY = e.pageY;
-
-            //     $('.close').css({
-            //         left: mouseX + "px",
-            //         top: mouseY + "px"
-            //     })
-            // })
-
         });
 
 
@@ -270,31 +211,68 @@
             el: 'section'
         });
 
-        var music = document.getElementsByClassName('music');
-        var music1 = document.getElementsByClassName('music1');
-        $('.image').eq(0).attr('src', 'img/musicon.jpg');
-        $('.image').eq(1).attr('src', 'img/urban.jpg');
-        $('.image1').eq(1).attr('src', 'img/urban1.jpg');
-        $('.image').eq(2).attr('src', 'img/q1.jpg');
-        $('.image1').eq(2).attr('src', 'img/q2.jpg');
-        $('.image').eq(3).attr('src', 'img/poke1.jpg');
-        $('.image1').eq(3).attr('src', 'img/poke2.jpg');
-
+        var img1 = document.querySelectorAll('.image');
+        var img2 = document.querySelectorAll('.image1');
+        var h1 = document.querySelectorAll('.left_box>h1');
+        img1[0].src='img/musicon.jpg';
+        img1[1].src='img/urban.jpg';
+        img2[1].src='img/urban1.jpg';
+        img1[2].src='img/q1.jpg';
+        img2[2].src='img/q2.jpg';
+        img1[3].src='img/poke1.jpg';
+        img2[3].src='img/poke2.jpg';
+        h1[0].innerText='MUSICON'
+        h1[1].innerText='URBAN PHOTO'
+        h1[2].innerText='QUANTIC DREAM'
+        h1[3].innerText='POKEMON'
 
 
         $(function(){
             $('.text').hover(function(){
-                $('.video').removeClass('video1');
-                $('.video').addClass('video2'),function(){
-                    $('.video').css({backgroundImage:'url(img/q1.jpg'});
-                };
+                var index2=$(this).index();
+            setTimeout( ()=> $('.video').css({display:'none'}))
+            setTimeout( ()=> $('.video2').css({display:'block'}))
+            setTimeout( ()=> $('.video2').css({display:'none'}),1500)
+            setTimeout( ()=> $('.ttv').eq(index2).css({display:'block'}),1500)
+         
             },function(){
-                $('.video').removeClass('video2');
-                $('.video').addClass('video1');
-            });
+                $('.video2').css('display','none');
+                $('.ttv').css('display','none');
+                $('.video').css('display','block');
+            },5000);
         })
 
 
+    //    var video1= setTimeout(function(){
+    //         $('.video').css({display:'none'});
+    //     });
+    //     var video2= setTimeout(function(){
+    //         $('.video2').css({display:'block'},5000)
+    //     },3000);
+    //     var video3= setTimeout(function(){
+    //         $('.video2').css({display:'none'});
+    //     },3000);
+    //     var video4= setTimeout(function(){
+    //         $('.video3').css({display:'none'});
+    //     });
+
+
+        // var text=document.querySelectorAll('.text');
+        // text.addEventListener('mouseover',function(){
+        //     setTimeout(function(){
+        //         $('.video').css({display:'none'});
+        //     });
+        //     setTimeout(function(){
+        //         $('.video2').css({display:'block'},5000)
+        //     },5000);
+        //     setTimeout(function(){
+        //         $('.video2').css({display:'none'});
+        //     });
+        //     setTimeout(function(){
+        //         $('.video3').css({display:'none'});
+        //     });
+
+        // });
 
  
 
