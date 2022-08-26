@@ -50,6 +50,12 @@ header {
     @include main(bage, "https://raw.githubusercontent.com/pizza3/asset/master/natureSmaller.png", 7100%, 100%, #333);
 
     animation: ani2 2s steps(70) forwards;
+    h1{
+        background-image: url(../img/sunse.gif);
+        -webkit-text-fill-color: rgb(255 0 0 / 0%);
+        -webkit-background-clip: text;
+        background-size: cover;
+    }
 
 }
 
@@ -273,26 +279,48 @@ section {
     .button{
         width:200px;
         height:50px;
-        border-radius: 30px;
         transition:$t;
-        border:1px solid black;
         background-color: none;
+        position:relative;
         @include flex(flex,center,center,row);
         a{
             color:black;
             text-decoration: none;
+            transition: $t;
         }
-        &:hover{
-            background-color: white;
-            border:1px solid white;
+        &:hover .circle{
+          transform: scale(0);
         }
+        &:hover .circle2{
+            transform: scale(1);
+          }
 
         &:hover a{
-            color:black;
+            transform: translateX(25px);
         }
     }
 }
-
+.circle{
+    cursor: pointer;
+    width:50px;
+    height:50px;
+    position:absolute;
+    border-radius: 50%;
+    border:1px solid #fff;
+    left:10%;
+    transition: $t;
+}
+.circle2{
+    cursor: pointer;
+    width:45px;
+    height:45px;
+    position:absolute;
+    border-radius: 50%;
+    background-color: white;
+    left:10%;
+    transform: scale(0);
+    transition:$t;
+}
 
 
 .page{
@@ -363,11 +391,11 @@ section {
 
 
 .sc1{
-   transform:translate3d(0px,-740px,0px) scale(2);
+   transform:translate3d(0px,-383px,0px) scale(1.5);
 }
 
 .sc2{
-    transform:translate3d(0px,-1315px,0px) scale(3);
+    transform:translate3d(0px,-709px,0px) scale(2);
   
 }
 
@@ -389,9 +417,13 @@ section {
     transform:scale(7) rotate(-10deg) translate3d(-23px,-516px,0px);;
     display: none;
 }
+.about_box{
+    width:100%;
+    height:121px;
+}
 .about{
     width:100%;
-    height:1300px;
+    height:2580px;
  
     margin-top:-45%;
     position:absolute;
@@ -409,23 +441,22 @@ section {
         flex-wrap: wrap;
     };
     width:50%;
-    height:400px;
-    background-color: aqua;
-   
+    height:400px;   
 }
 @for $i from 1 through 12{
     .skill_icon:nth-of-type(#{$i}){
-        background-image: url(../img/s#{$i}.png);
+        background-image: url(../img/s#{$i}.png),
+        linear-gradient(350deg, #8ccbfdb5,transparent);
     }
 }
+
 .skill_icon{
     border-radius: 50%;
-    background:linear-gradient(45deg,rgb(187, 84, 84),transparent);
     width:150px;
     height:150px;
-    background-color: antiquewhite;
+    background-color: #fff;
     background-position: center;
-    background-size: 80%,80%;
+    background-size: 70%,100%;
     background-repeat: no-repeat;
     position:relative;
     overflow: hidden;

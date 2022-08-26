@@ -26,6 +26,12 @@ header {
   -webkit-animation: ani2 2s steps(70) forwards;
           animation: ani2 2s steps(70) forwards;
 }
+header h1 {
+  background-image: url(../img/sunse.gif);
+  -webkit-text-fill-color: rgba(255, 0, 0, 0);
+  -webkit-background-clip: text;
+  background-size: cover;
+}
 
 h1 {
   font-family: "Black Han Sans", "sans-serif";
@@ -243,10 +249,9 @@ section {
 .port_box_left .button {
   width: 200px;
   height: 50px;
-  border-radius: 30px;
   transition: 0.3s ease;
-  border: 1px solid black;
   background-color: none;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -255,13 +260,39 @@ section {
 .port_box_left .button a {
   color: black;
   text-decoration: none;
+  transition: 0.3s ease;
 }
-.port_box_left .button:hover {
-  background-color: white;
-  border: 1px solid white;
+.port_box_left .button:hover .circle {
+  transform: scale(0);
+}
+.port_box_left .button:hover .circle2 {
+  transform: scale(1);
 }
 .port_box_left .button:hover a {
-  color: black;
+  transform: translateX(25px);
+}
+
+.circle {
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  left: 10%;
+  transition: 0.3s ease;
+}
+
+.circle2 {
+  cursor: pointer;
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  border-radius: 50%;
+  background-color: white;
+  left: 10%;
+  transform: scale(0);
+  transition: 0.3s ease;
 }
 
 .page {
@@ -335,11 +366,11 @@ section {
 }
 
 .sc1 {
-  transform: translate3d(0px, -740px, 0px) scale(2);
+  transform: translate3d(0px, -383px, 0px) scale(1.5);
 }
 
 .sc2 {
-  transform: translate3d(0px, -1315px, 0px) scale(3);
+  transform: translate3d(0px, -709px, 0px) scale(2);
 }
 
 .sc3 {
@@ -359,9 +390,14 @@ section {
   display: none;
 }
 
+.about_box {
+  width: 100%;
+  height: 121px;
+}
+
 .about {
   width: 100%;
-  height: 1300px;
+  height: 2580px;
   margin-top: -45%;
   position: absolute;
   z-index: -1;
@@ -385,65 +421,63 @@ section {
   flex-wrap: wrap;
   width: 50%;
   height: 400px;
-  background-color: aqua;
 }
 
 .skill_icon:nth-of-type(1) {
-  background-image: url(../img/s1.png);
+  background-image: url(../img/s1.png), linear-gradient(350deg, rgba(140, 203, 253, 0.7098039216), transparent);
 }
 
 .skill_icon:nth-of-type(2) {
-  background-image: url(../img/s2.png);
+  background-image: url(../img/s2.png), linear-gradient(350deg, rgba(140, 203, 253, 0.7098039216), transparent);
 }
 
 .skill_icon:nth-of-type(3) {
-  background-image: url(../img/s3.png);
+  background-image: url(../img/s3.png), linear-gradient(350deg, rgba(140, 203, 253, 0.7098039216), transparent);
 }
 
 .skill_icon:nth-of-type(4) {
-  background-image: url(../img/s4.png);
+  background-image: url(../img/s4.png), linear-gradient(350deg, rgba(140, 203, 253, 0.7098039216), transparent);
 }
 
 .skill_icon:nth-of-type(5) {
-  background-image: url(../img/s5.png);
+  background-image: url(../img/s5.png), linear-gradient(350deg, rgba(140, 203, 253, 0.7098039216), transparent);
 }
 
 .skill_icon:nth-of-type(6) {
-  background-image: url(../img/s6.png);
+  background-image: url(../img/s6.png), linear-gradient(350deg, rgba(140, 203, 253, 0.7098039216), transparent);
 }
 
 .skill_icon:nth-of-type(7) {
-  background-image: url(../img/s7.png);
+  background-image: url(../img/s7.png), linear-gradient(350deg, rgba(140, 203, 253, 0.7098039216), transparent);
 }
 
 .skill_icon:nth-of-type(8) {
-  background-image: url(../img/s8.png);
+  background-image: url(../img/s8.png), linear-gradient(350deg, rgba(140, 203, 253, 0.7098039216), transparent);
 }
 
 .skill_icon:nth-of-type(9) {
-  background-image: url(../img/s9.png);
+  background-image: url(../img/s9.png), linear-gradient(350deg, rgba(140, 203, 253, 0.7098039216), transparent);
 }
 
 .skill_icon:nth-of-type(10) {
-  background-image: url(../img/s10.png);
+  background-image: url(../img/s10.png), linear-gradient(350deg, rgba(140, 203, 253, 0.7098039216), transparent);
 }
 
 .skill_icon:nth-of-type(11) {
-  background-image: url(../img/s11.png);
+  background-image: url(../img/s11.png), linear-gradient(350deg, rgba(140, 203, 253, 0.7098039216), transparent);
 }
 
 .skill_icon:nth-of-type(12) {
-  background-image: url(../img/s12.png);
+  background-image: url(../img/s12.png), linear-gradient(350deg, rgba(140, 203, 253, 0.7098039216), transparent);
 }
 
 .skill_icon {
   border-radius: 50%;
-  background: linear-gradient(45deg, rgb(187, 84, 84), transparent);
   width: 150px;
   height: 150px;
-  background-color: antiquewhite;
+  background-color: #fff;
   background-position: center;
-  background-size: 80%, 80%;
+  background-size: 70%, 100%;
   background-repeat: no-repeat;
   position: relative;
   overflow: hidden;
