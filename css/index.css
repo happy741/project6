@@ -1,12 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Black+Han+Sans:400");
 @import url("https://fonts.googleapis.com/css?family=Black+Han+Sans&display=swap&subset=korean");
+@import url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2204@1.0/HallymGothic-Regular.woff2");
 * {
   margin: 0;
   padding: 0;
-}
-
-p {
-  font-family: "Pretendard-Regular";
 }
 
 header {
@@ -23,6 +20,9 @@ header {
   -webkit-mask-size: 7100% 100%;
   mask-size: 7100% 100%;
   color: #333;
+  background-image: url("../img/main2.jpg");
+  background-size: cover;
+  background-position: center;
   -webkit-animation: ani2 2s steps(70) forwards;
           animation: ani2 2s steps(70) forwards;
 }
@@ -36,6 +36,10 @@ header h1 {
 h1 {
   font-family: "Black Han Sans", "sans-serif";
   font-size: 10.5vw;
+}
+
+p {
+  font-family: "HallymGothic-Regular";
 }
 
 section {
@@ -299,6 +303,14 @@ section {
   left: 10%;
   transform: scale(0);
   transition: 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.prev, .next, .close {
+  cursor: pointer;
 }
 
 .page {
@@ -528,7 +540,8 @@ section {
 }
 
 .my {
-  font-size: 50px;
+  font-size: 40px;
+  font-family: "HallymGothic-Regular";
 }
 
 .photo2 {
