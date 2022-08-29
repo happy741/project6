@@ -84,6 +84,12 @@ section {
   background-position: center;
   display: none;
 }
+#sec_box :nth-of-type(8) {
+  background-image: url("../img/b1.png");
+  background-size: cover;
+  background-position: center;
+  display: none;
+}
 
 .video {
   width: 100%;

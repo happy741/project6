@@ -106,6 +106,10 @@ section {
         @include bg('../img/po1.jpg',cover,center);
         display: none;
     }
+     :nth-of-type(8){
+        @include bg('../img/b1.png',cover,center);
+        display: none;
+    }
    
 }
 .video{
