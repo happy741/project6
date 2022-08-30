@@ -43,24 +43,69 @@ $c: pointer;
 header {
     width: $w;
     height: 100vh;
-    background-color: antiquewhite;
-    @include flex(flex, space-between, flex-end, column);
-    @include main(bage, "https://raw.githubusercontent.com/pizza3/asset/master/natureSmaller.png", 7100%, 100%, #333);
-    @include bg('../img/main2.jpg',cover,center);
-    animation: ani2 2s steps(70) forwards;
-    h1{
-        background-image: url(../img/sunse.gif);
-        -webkit-text-fill-color: rgb(255 0 0 / 0%);
-        -webkit-background-clip: text;
-        background-size: cover;
-    }
-
+    display: flex;
 }
-
+.left{
+    width:35%;
+    height:100%;
+    background-color: ghostwhite;
+}
+.right{
+    width:65%;
+    height:100%;
+    background-color: #29295e;
+}
+#pic{
+    width:200px;
+    height:400px;
+    position:absolute;
+    top:10%;
+    left:20%;
+    @include bg('../img/m1.png',cover,center);
+}
+#right_box{
+    width:584px;
+    height:500px;
+    position:absolute;
+    top:40%;
+    left:10%;
+    @include flex(flex,space-evenly,flex-end,row){
+        flex-wrap: wrap;
+        align-content: flex-end;
+    };
+    @include bg('../img/m7.png',cover,center);
+}
+.right2{
+    width:300px;
+    height:300px;
+    background-color: #333;
+}
+// #table{
+//     width:900px;
+//     height:30px;
+//     background-color: #666;
+// }
+// #radio{
+//     width:300px;
+//     height:100px;
+//     background-color: aqua;
+//     @include bg('../img/m5.png',cover,center);
+// }
+// #lp{
+//     width:400px;
+//     height:320px;
+//     background-color: blueviolet;
+//     @include bg('../img/m2.png',cover,center);
+// }
+// #plan{
+//     width:150px;
+//     height:155px;
+//     @include bg('../img/m6.png',cover,center);
+// }
 h1 {
     font: {
         family: 'Black Han Sans', 'sans-serif';
-        size: 10.5vw;
+        size: 7vw;
 
     }
 

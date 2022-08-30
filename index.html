@@ -18,8 +18,22 @@
     <div id="wrap">
 
         <header>
-            <h1>HWANG GI BBEUM</h1>
-            <H1>PORTFOLIO</H1>
+            <div class="left">
+                <div id="pic"></div>
+            </div>
+            <div class="right">
+                <div class="right2"></div>
+                <div id="right_box">
+                    <div id="plan"></div>
+                    <div id="lp"></div>
+                    <div id="radio"></div>
+                    <div id="table"></div>
+                </div>
+                <h1>HWANG GI BBEUM</h1>
+                <h1>PORTFOLIO</h1>
+            </div>
+          
+
         </header>
         <section>
 
@@ -102,10 +116,7 @@
             </div>
             <h1>skill</h1>
             <div class="skill">
-                <div class="skill_icon">
-                    <div class="wave"></div>
-                    <div class="wave"></div>
-                </div>
+                <div class="skill_icon"></div>
                 <div class="skill_icon"></div>
                 <div class="skill_icon"></div>
                 <div class="skill_icon"></div>
@@ -146,7 +157,7 @@
                         index = 4;
                     }
                     $('.port_box').css({ transform: 'translate(-100%)' });
-                    $('.port_box').eq(index ++).css({ transform: 'translate(0)' });
+                    $('.port_box').eq(index++).css({ transform: 'translate(0)' });
 
                 });
                 $('.prev').click(function(){
