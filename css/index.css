@@ -280,6 +280,31 @@ section {
   transform: translateX(25px);
 }
 
+.button + p {
+  width: 75%;
+  margin-top: 3%;
+}
+
+.block_box {
+  display: flex;
+}
+
+.block {
+  width: 100px;
+  height: 50px;
+  background-color: rgb(226, 190, 164);
+  border-radius: 10px;
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin: 1%;
+}
+.block:nth-of-type(3) {
+  display: none;
+}
+
 .circle {
   cursor: pointer;
   width: 50px;
@@ -308,8 +333,9 @@ section {
 }
 
 .code_box {
-  width: 90%;
+  width: 70%;
   height: 350px;
+  margin-top: 3%;
 }
 
 .code_menu {
@@ -336,7 +362,7 @@ section {
 
 .html, .css, .js {
   width: 100%;
-  height: 300px;
+  height: 272px;
 }
 .html iframe, .css iframe, .js iframe {
   width: 100%;
@@ -468,6 +494,9 @@ section {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  background-image: url("../img/bg.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
 .my1 {
@@ -620,6 +649,11 @@ section {
   height: 500px;
   background-color: #666;
   display: flex;
+  flex-wrap: wrap;
+}
+.skill:first-of-type .wave::before, .skill:first-of-type .wave::after {
+  -webkit-animation: wave2 5s linear infinite;
+          animation: wave2 5s linear infinite;
 }
 
 .circe_wave {
@@ -660,14 +694,14 @@ section {
 .circe_wave .wave:before {
   border-radius: 45%;
   background: rgb(255, 255, 255);
-  -webkit-animation: animate 5s linear infinite;
-          animation: animate 5s linear infinite;
+  -webkit-animation: wave 5s linear infinite;
+          animation: wave 5s linear infinite;
 }
 .circe_wave .wave:after {
   border-radius: 40%;
   background: rgba(255, 255, 255, 0.5);
-  -webkit-animation: animate 5s linear infinite;
-          animation: animate 5s linear infinite;
+  -webkit-animation: wave 5s linear infinite;
+          animation: wave 5s linear infinite;
 }
 
 @-webkit-keyframes ani2 {
@@ -768,22 +802,14 @@ section {
   }
 }
 @-webkit-keyframes wave {
-  from {
-    transform: rotate(0deg);
+  0% {
+    transform: translate(-50%, -88%) rotate(0deg);
   }
-  from {
-    transform: rotate(360deg);
+  100% {
+    transform: translate(-50%, -88%) rotate(360deg);
   }
 }
 @keyframes wave {
-  from {
-    transform: rotate(0deg);
-  }
-  from {
-    transform: rotate(360deg);
-  }
-}
-@-webkit-keyframes animate {
   0% {
     transform: translate(-50%, -88%) rotate(0deg);
   }
@@ -791,11 +817,19 @@ section {
     transform: translate(-50%, -88%) rotate(360deg);
   }
 }
-@keyframes animate {
+@-webkit-keyframes wave1 {
   0% {
-    transform: translate(-50%, -88%) rotate(0deg);
+    transform: translate(-50%, -75%) rotate(0deg);
   }
   100% {
-    transform: translate(-50%, -88%) rotate(360deg);
+    transform: translate(-50%, -75%) rotate(360deg);
+  }
+}
+@keyframes wave1 {
+  0% {
+    transform: translate(-50%, -75%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -75%) rotate(360deg);
   }
 }

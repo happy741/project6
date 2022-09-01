@@ -304,6 +304,25 @@ section {
         }
     }
 }
+.button+p{
+    width:75%;
+    margin-top:3%;
+}
+.block_box{
+    display: flex;
+}
+.block{
+    width:100px;
+    height:50px;
+    background-color: rgb(226, 190, 164);
+    border-radius:10px;
+    border: 1px solid white;
+    @include flex(flex,center,center,row);
+    margin:1%;
+    &:nth-of-type(3){
+        display: none;
+    }
+}
 .circle{
     cursor: pointer;
     width:50px;
@@ -328,13 +347,15 @@ section {
 }
 
 .code_box{
-    width:90%;
+    width:70%;
     height:350px;
+    margin-top:3%;
 }
 .code_menu{
     width:50%;
     height:50px;
     color:black;
+ 
     ul{
        display: flex;
         li{
@@ -351,7 +372,7 @@ section {
 }
 .html,.css,.js{
     width:100%;
-    height:300px;
+    height:272px;
     iframe{
         width:100%;
         height:100%;
@@ -478,7 +499,7 @@ section {
     position:absolute;
     z-index: -1;
  @include flex(flex,center,center,column);
-//  @include bg('../img/bg.jpg',cover,center);
+ @include bg('../img/bg.jpg',cover,center);
 }
 
 .my1{
@@ -575,7 +596,7 @@ section {
     background-color: rgba(255, 206, 206,0.5);
     border-radius: 20px;
     margin-top:2%;
-    @include flex(flex,space-around,center,row);
+    @include flex(flex,space-around,center,row)
 }
 #name{
     width:12%;
@@ -606,6 +627,19 @@ section {
     height:500px;
     background-color: #666;
     display: flex;
+    flex-wrap: wrap;
+
+            
+    &:first-of-type{
+        .wave{
+            &::before,&::after{
+                animation: wave2 5s linear infinite;
+            }
+        }
+           
+     
+     
+    }
  }
   .circe_wave {
 
@@ -647,13 +681,14 @@ section {
       &:before {
         border-radius: 45%;
         background: rgba(255, 255, 255, 1);
-        animation: animate 5s linear infinite;
+        animation: wave 5s linear infinite;
+
       }
       
       &:after {
         border-radius: 40%;
         background: rgba(255, 255, 255, .5);
-        animation: animate 5s linear infinite;
+        animation: wave 5s linear infinite;
       }
     }
   }
@@ -703,17 +738,21 @@ section {
       0.3em 0 0 0 yellow}
   }
 
-  @keyframes wave {
-    from { transform: rotate(0deg);}
-    from { transform: rotate(360deg);}
-  }
 
  
-  @keyframes animate {
+  @keyframes wave {
     0% {
       transform: translate(-50%, -88%) rotate(0deg);
     }
     100% {
       transform: translate(-50%, -88%) rotate(360deg);
+    }
+  }
+  @keyframes wave1 {
+    0% {
+      transform: translate(-50%, -75%) rotate(0deg);
+    }
+    100% {
+      transform: translate(-50%, -75%) rotate(360deg);
     }
   }
