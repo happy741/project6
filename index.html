@@ -19,8 +19,8 @@
 
         <header>
 
-                <h1>HWANG GI BBEUM</h1>
-                <H1>PORTFOLIO</H1>
+            <h1>HWANG GI BBEUM</h1>
+            <H1>PORTFOLIO</H1>
         </header>
         <section>
 
@@ -64,57 +64,98 @@
             <section_com></section_com>
         </section>
 
-
-
+        <div class="about_box">4250.045</div>
+        <div class="about_box">876453121</div>
+        <h1>About Me</h1>
         <div class="about">
-            <div class="about_box">4250.045</div>
-            <div class="about_box">876453121</div>
-            <h1>About Me</h1>
-            <div class="photo">
-                <div class="photo2"></div>
-                <div class="my1 my">
-                  HWAING GI BBEUM<br>
-                  황기쁨<br>
 
-                  <button>Download CV</button>
-                  <div class="button">
-                    <div class="text1">Submit</div>
-                  </div>
-                  <div class="progress-bar"></div>
-                  <svg x="0px" y="0px"
-                   viewBox="0 0 25 30" style="enable-background:new 0 0 25 30;">
-                    <path class="check" class="st0" d="M2,19.2C5.9,23.6,9.4,28,9.4,28L23,2"/>
-                  </svg>
-                
-                  
+
+            <div class="my1">
+                <div class="pola">
+                    <div class="pola2">
+                        <div class="pola3"></div>
+                        <p></p>
+                    </div>
+                    <div class="pola2">
+                        <div class="pola3"></div>
+                        <p></p>
+                    </div>
                 </div>
-                <div class="my1">
-                    <p>BIRTH: 1998.03.27</p>
-                    <p>PHONE: 010-8595-9432</p>
-                    <P>E-MAIL: llpl1402@naver.com</P>
-                    <p>HOME:경기도 안산시</p>
-
-                    <p>HISTORY: 2020.03 ~ 2020.09 연세드림치과<BR>
-                        2020.09 ~ 2022.09 서울아라치과</p>
-                    
+                <div id="photo_box">
+                    <div class="photo"></div>
+                </div>
+                <div class="pola">
+                    <div class="pola2">
+                        <div class="pola3"></div>
+                        <p></p>
+                    </div>
+                    <div class="pola2">
+                        <div class="pola3"></div>
+                        <p></p>
+                    </div>
                 </div>
             </div>
-            <h1>skill</h1>
+
+            <div class="my2">
+                <h1>황기쁨</h1>
+                <p>1998. 03. 27</p>
+                <p>llpl1402@naver.com</p>
+            </div>
+            <div class="my3">
+                <div id="name">
+                    <p>NAME</p>
+                    <p>황기쁨</p>
+                </div>
+                <div id="phone">
+                    <p>PHONE</p>
+                    <p>010-8595-9432</p>
+                </div>
+                <div id="lo">
+                    <p>LOCATION</p>
+                    <p>안산시 일동</p>
+                </div>
+                <div id="his">
+                    <p>NAME</p>
+                    <p>2022.03 ~ 2022.09국비지원 웹퍼블리셔 취업과정 이수(6개월)</p>
+                    <p>2020. 09 ~ 2022. 09 안양 서울아라치과</p>
+                    <p>2020. 03 ~ 2020. 09 안양 연세드림치과</p>
+                </div>
+                <div id="certi">
+                    <p>CERTIFICATION</p>
+                    <p>치위생사 면허증</p>
+                    <p>포토샵1급</p>
+                </div>
+            </div>
             <div class="skill">
-                <div class="skill_icon"></div>
-                <div class="skill_icon"></div>
-                <div class="skill_icon"></div>
-                <div class="skill_icon"></div>
-                <div class="skill_icon"></div>
-                <div class="skill_icon"></div>
-                <div class="skill_icon"></div>
-                <div class="skill_icon"></div>
-                <div class="skill_icon"></div>
-                <div class="skill_icon"></div>
-                <div class="skill_icon"></div>
-                <div class="skill_icon"></div>
+
+                <div class="circe_wave">
+                    <p>HTML&CSS</p>
+                    <div class="wave"></div>
+                </div>
+                <div class="circe_wave">
+                    <p>JS</p>
+                    <div class="wave"></div>
+                </div>
+                <div class="circe_wave">
+                    <p>jQuery</p>
+                    <div class="wave"></div>
+                </div>
+                <div class="circe_wave">
+                    <p>Ps</p>
+                    <div class="wave"></div>
+                </div>
+                <div class="circe_wave">
+                    <p>Ai</p>
+                    <div class="wave"></div>
+                </div>
+                <div class="circe_wave">
+                    <p>Github</p>
+                    <div class="wave"></div>
+                </div>
+                
             </div>
         </div>
+    </div>
     </div>
 
     <script>
@@ -145,15 +186,15 @@
                     $('.port_box').eq(index++).css({ transform: 'translate(0)' });
 
                 });
-                $('.prev').click(function(){
-                    if(index<0){
-                        index=0;
+                $('.prev').click(function () {
+                    if (index < 0) {
+                        index = 0;
                     }
                     $('.port_box').css({ transform: 'translate(-100%)' });
                     $('.port_box').eq(index--).css({ transform: 'translate(0)' });
                 });
             });
-         
+
 
             $('.close').click(function () {
                 $('.port_box').css({ transform: 'translate(-100%)' });
@@ -216,12 +257,24 @@
                             </div>
                             <P>HTML과 CSS를 배우며 처음 만든 페이지이며<br>
                                 여러가지 악기들과 LP를 판매하는 사이트입니다.</P>
+                            <div class="code_box">
+                                <div class="code_menu">
+                                    <ul>
+                                        <li>HTML</li>
+                                        <li>CSS</li>
+                                        <li>JS</li>
+                                    </ul>
+                                    </div>
+                                <div class="html">
+                                </div>
+                                <div class='css'>
+                                </div>
+                                <div class="js">
+                                </div>
+                                
+                            </div>
                         </div>
-                        <iframe
-  src="https://carbon.now.sh/embed?bg=rgba%28171%2C+184%2C+195%2C+1%29&t=seti&wt=none&l=auto&width=680&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%250A%2520%2520%2520%2520%2520%2520%2520%2520%253Cdiv%2520id%253D%2522new%2522%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Ch1%253ENEW%2520ARRIWALS%2520%253C%252Fh1%253E%250A%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Cdiv%2520class%253D%2522strap%2520m1%2522%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Ca%2520href%253D%2522sub.html%2522%253E%2520%253Cimg%2520src%253D%2522img%252Fstrap.png%2522%2520alt%253D%2522strap%2522%253E%253C%252Fa%253E%250A%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Cdiv%2520class%253D%2522line1%2522%253E%253C%252Fdiv%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Cdiv%2520class%253D%2522line2%2522%253E%253C%252Fdiv%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Cdiv%2520class%253D%2522line3%2522%253E%253C%252Fdiv%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Cdiv%2520class%253D%2522line4%2522%253E%253C%252Fdiv%253E%250A%250A%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253C%252Fdiv%253E%250A%250A%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Cdiv%2520class%253D%2522app%2522%253E%250A%250A%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Ca%2520href%253D%2522sub.html%2522%253E%2520%253Cimg%2520src%253D%2522img%252Fl.png%2522%2520alt%253D%2522lecord%2522%253E%253C%252Fa%253E%250A%250A%250A%250A%250A%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253C%252Fdiv%253E%250A%250A%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Cdiv%2520id%253D%2522strap%2522%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Ca%2520href%253D%2522sub.html%2522%253E%2520%253Cimg%2520src%253D%2522img%252Fp.png%2522%2520alt%253D%2522pick%2522%253E%253C%252Fa%253E%250A%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Cdiv%2520id%253D%2522line1%2522%253E%253C%252Fdiv%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Cdiv%2520id%253D%2522line2%2522%253E%253C%252Fdiv%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Cdiv%2520id%253D%2522line3%2522%253E%253C%252Fdiv%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Cdiv%2520id%253D%2522line4%2522%253E%253C%252Fdiv%253E%250A%250A%250A%250A%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253C%252Fdiv%253E%250A%250A%250A%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Cdiv%2520id%253D%2522app%2522%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Ca%2520href%253D%2522sub.html%2522%253E%2520%253Cimg%2520src%253D%2522img%252Fapp.png%2522%2520alt%253D%2522app%2522%253E%253C%252Fa%253E%250A%250A%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253C%252Fdiv%253E%250A%250A%250A%250A%250A%250A%250A%2520%2520%2520%2520%2520%2520%2520%2520%253C%252Fdiv%253E"
-  style="width: 799px; height: 1210px; border:0; transform: scale(1); overflow:hidden;"
-  sandbox="allow-scripts allow-same-origin">
-</iframe>
+                       
                         <div class="left_box">
                             <div class="next"><span>next</span></div>
                             <div class="prev"><span>prev</span></div>
@@ -239,85 +292,78 @@
         var img2 = document.querySelectorAll('.image1');
         var h1 = document.querySelectorAll('.left_box>h1');
         var p = document.querySelectorAll('.left_box>p');
+        var code = document.querySelectorAll('.html');
+        var code2 = document.querySelectorAll('.css');
+        var code3 = document.querySelectorAll('.js');
+        var li = document.querySelectorAll('.code_box>li');
         var link = document.querySelectorAll('.button>a');
         var link2 = document.getElementsByClassName('circle2');
-        img1[0].src='img/musicon.jpg';
-        img1[1].src='img/urban.jpg';
-        img2[1].src='img/urban1.jpg';
-        img1[2].src='img/q1.jpg';
-        img2[2].src='img/q2.jpg';
-        img1[3].src='img/poke1.jpg';
-        img2[3].src='img/poke2.jpg';
-        img1[4].src='img/B1.jpg';
-        img2[4].src='img/B2.jpg';
-        link[0].href='https://happy741.github.io/project1/';
-        link2[0].href='https://happy741.github.io/project1/';
-        link[1].href='https://happy741.github.io/project2/';
-        link2[1].href='https://happy741.github.io/project2/';
-        h1[0].innerText='MUSICON'
-        h1[1].innerText='URBAN PHOTO'
-        h1[2].innerText='QUANTIC DREAM'
-        h1[3].innerText='POKEMON'
-        h1[4].innerText="BANDI&LUNI'S"
-        p[1].innerText="독특한 컨셉들을 촬영해주는 사진관이며 반응형과 제이쿼리,자바스크립트 등등 처음 배워 적용했던 사이트 입니다."
-        p[2].innerText="퀀틱드림회사의 디트로이트 비컴휴먼 게임 홈페이지를 제작했습니다. 게임의 컨셉에 맞춰 애니메이션 효과를 많이 주고 서브페이지는 다른 게임들의 소개하는 페이지를 제작했습니다."
-        p[3].innerText="포켓몬의 불가사의던전dx를 소개하는 내용입니다. 한국에 정식발매안해 한국 사이트가 없어 제작해봤습니다."
-        p[4].innerText="ajax를 이용하여 만든 책 홈페이지 입니다."
+        img1[0].src = 'img/musicon.jpg';
+        img1[1].src = 'img/urban.jpg';
+        img2[1].src = 'img/urban1.jpg';
+        img1[2].src = 'img/q1.jpg';
+        img2[2].src = 'img/q2.jpg';
+        img1[3].src = 'img/poke1.jpg';
+        img2[3].src = 'img/poke2.jpg';
+        img1[4].src = 'img/B1.jpg';
+        img2[4].src = 'img/B2.jpg';
+        link[0].href = 'https://happy741.github.io/project1/';
+        link2[0].href = 'https://happy741.github.io/project1/';
+        link[1].href = 'https://happy741.github.io/project2/';
+        link2[1].href = 'https://happy741.github.io/project2/';
+        h1[0].innerText = 'MUSICON'
+        code[0].innerHTML = `<iframe
+  src="https://carbon.now.sh/embed?bg=rgba%28171%2C+184%2C+195%2C+1%29&t=seti&wt=sharp&l=auto&width=680&ds=true&dsyoff=41px&dsblur=52px&wc=true&wa=true&pv=0px&ph=0px&ln=false&fl=1&fm=Hack&fs=14px&lh=152%25&si=false&es=2x&wm=false&code=%253Cdiv%2520id%253D%2522new%2522%253E%250A%2520%2520%2520%2520%2520%2520%253Ch1%253ENEW%2520ARRIWALS%2520%253C%252Fh1%253E%250A%2520%2520%2520%2520%2520%2520%253Cdiv%2520class%253D%2522strap%2520m1%2522%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Ca%2520href%253D%2522sub.html%2522%253E%2520%253Cimg%2520src%253D%2522img%252Fstrap.png%2522%2520alt%253D%2522strap%2522%253E%253C%252Fa%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Cdiv%2520class%253D%2522line1%2522%253E%253C%252Fdiv%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Cdiv%2520class%253D%2522line2%2522%253E%253C%252Fdiv%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Cdiv%2520class%253D%2522line3%2522%253E%253C%252Fdiv%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Cdiv%2520class%253D%2522line4%2522%253E%253C%252Fdiv%253E%250A%2520%2520%2520%2520%2520%2520%253C%252Fdiv%253E%250A%2520%2520%2520%2520%2520%2520%253Cdiv%2520class%253D%2522app%2522%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Ca%2520href%253D%2522sub.html%2522%253E%2520%253Cimg%2520src%253D%2522img%252Fl.png%2522%2520alt%253D%2522lecord%2522%253E%253C%252Fa%253E%250A%2520%2520%2520%2520%2520%2520%253C%252Fdiv%253E%250A%2520%2520%2520%2520%2520%2520%253Cdiv%2520id%253D%2522strap%2522%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Ca%2520href%253D%2522sub.html%2522%253E%2520%253Cimg%2520src%253D%2522img%252Fp.png%2522%2520alt%253D%2522pick%2522%253E%253C%252Fa%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Cdiv%2520id%253D%2522line1%2522%253E%253C%252Fdiv%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Cdiv%2520id%253D%2522line2%2522%253E%253C%252Fdiv%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Cdiv%2520id%253D%2522line3%2522%253E%253C%252Fdiv%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Cdiv%2520id%253D%2522line4%2522%253E%253C%252Fdiv%253E%250A%2520%2520%2520%2520%2520%2520%253C%252Fdiv%253E%250A%2520%2520%2520%2520%2520%2520%253Cdiv%2520id%253D%2522app%2522%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Ca%2520href%253D%2522sub.html%2522%253E%2520%253Cimg%2520src%253D%2522img%252Fapp.png%2522%2520alt%253D%2522app%2522%253E%253C%252Fa%253E%250A%2520%2520%2520%2520%2520%2520%253C%252Fdiv%253E%250A%2520%2520%253C%252Fdiv%253E"
+  style=border:0; transform: scale(1); overflow:hidden;"
+  sandbox="allow-scripts allow-same-origin">
+</iframe>`
+        code2[0].innerHTML = `<iframe
+  src="https://carbon.now.sh/embed?bg=rgba%28171%2C+184%2C+195%2C+1%29&t=seti&wt=sharp&l=css&width=&ds=false&dsyoff=76px&dsblur=63px&wc=true&wa=true&pv=0px&ph=0px&ln=false&fl=1&fm=Hack&fs=13.5px&lh=165%25&si=false&es=2x&wm=false&code=.m1%2520.line1%257Bwidth%253A%2520590px%253B%2520height%253A%25203px%253B%2520background-color%253A%2520%2523fff%253B%2520position%253A%2520relative%253B%2520bottom%253A20px%253B%2520left%253A4px%253B%2520opacity%253A0%253B%2520visibility%253A%2520visible%253B%257D%250A%2520.m1%2520.line2%257Bwidth%253A%25203px%253B%2520height%253A%2520405px%253B%2520background-color%253A%2520%2523fff%253B%2520position%253A%2520relative%253B%2520bottom%253A420px%253B%2520left%253A10px%253B%2520opacity%253A0%253B%2520visibility%253A%2520visible%253B%257D%250A%2520.m1%2520.line3%257Bwidth%253A%2520590px%253B%2520height%253A%25203px%253B%2520background-color%253A%2520%2523fff%253B%2520position%253A%2520relative%253B%2520bottom%253A815px%253B%2520left%253A4px%253B%2520opacity%253A0%253B%2520visibility%253A%2520visible%253B%257D%250A%2520.m1%2520.line4%257Bwidth%253A%25203px%253B%2520height%253A%2520405px%253B%2520background-color%253A%2520%2523fff%253B%2520position%253A%2520relative%253B%2520bottom%253A827px%253B%2520left%253A580px%253B%2520opacity%253A0%253B%2520visibility%253A%2520visible%253B%257D%250A%250A%2520.m1%253Ahover%2520.line1%257Bopacity%253A%25201%253B%2520visibility%253A%2520visible%253B%2520transition%253A%2520%2520all%25200.3s%2520ease-in-out%253B%257D%250A%2520.m1%253Ahover%2520.line2%257Bopacity%253A%25201%253B%2520visibility%253A%2520visible%253B%2520transition%253A%2520%2520all%25200.3s%2520ease-in-out%253B%257D%250A%2520.m1%253Ahover%2520.line3%257Bopacity%253A%25201%253B%2520visibility%253A%2520visible%253B%2520transition%253A%2520%2520all%25200.3s%2520ease-in-out%253B%257D%250A%2520.m1%253Ahover%2520.line4%257Bopacity%253A%25201%253B%2520visibility%253A%2520visible%253B%2520transition%253A%2520%2520all%25200.3s%2520ease-in-out%253B%257D%250A%250A%2520.m1%253Ahover%257Bopacity%253A%25200.8%253B%2520transition%253A%2520all%25200.3s%2520ease-in-out%253B%257D%250A%250A%2520%2523main%2520.app%257Bwidth%253A610px%253B%2520height%253A250px%253B%2520%2520float%253A%2520right%253B%2520margin%253A0%252010px%25200%25200%253B%257D%250A%2520%2523app%257Bwidth%253A605px%253B%2520height%253A250px%253B%2520%2520float%253A%2520left%253Bmargin%253A%25200%25200%25200%252011px%253B%257D%250A%2520%2523app%2520a%253Ahover%2520img%257B%2520transform%253A%2520scale%281.1%29%253B%257D%250A%2520%2523app%2520a%257Bdisplay%253A%2520block%253B%2520width%253A%2520100%2525%253B%2520height%253A%2520100%2525%253B%2520overflow%253A%2520hidden%253B%257D"
+  style="border:0; transform: scale(1); overflow:hidden;"
+  sandbox="allow-scripts allow-same-origin">
+</iframe>`
+        h1[1].innerText = 'URBAN PHOTO'
+        h1[2].innerText = 'QUANTIC DREAM'
+        h1[3].innerText = 'POKEMON'
+        h1[4].innerText = "BANDI&LUNI'S"
+        p[1].innerText = "독특한 컨셉들을 촬영해주는 사진관이며 반응형과 제이쿼리,자바스크립트 등등 처음 배워 적용했던 사이트 입니다."
+        p[2].innerText = "퀀틱드림회사의 디트로이트 비컴휴먼 게임 홈페이지를 제작했습니다. 게임의 컨셉에 맞춰 애니메이션 효과를 많이 주고 서브페이지는 다른 게임들의 소개하는 페이지를 제작했습니다."
+        p[3].innerText = "포켓몬의 불가사의던전dx를 소개하는 내용입니다. 한국에 정식발매안해 한국 사이트가 없어 제작해봤습니다."
+        p[4].innerText = "ajax를 이용하여 만든 책 홈페이지 입니다."
 
 
-        $(function(){
-            $('.text').hover(function(){
-                var index2=$(this).index();
-            setTimeout( ()=> $('.video').css({display:'none'}))
-            setTimeout( ()=> $('.video2').css({display:'block'}))
-            setTimeout( ()=> $('.video2').css({display:'none'}),500)
-            setTimeout( ()=> $('.ttv').eq(index2).css({display:'block'}),500)
-         
-            },function(){
-                $('.video2').css('display','none');
-                $('.ttv').css('display','none');
-                $('.video').css('display','block');
-            },5000);
+        $(function () {
+            $('.text').hover(function () {
+                var index2 = $(this).index();
+                setTimeout(() => $('.video').css({ display: 'none' }))
+                setTimeout(() => $('.video2').css({ display: 'block' }))
+                setTimeout(() => $('.video2').css({ display: 'none' }), 500)
+                setTimeout(() => $('.ttv').eq(index2).css({ display: 'block' }), 500)
 
-            
+            }, function () {
+                $('.video2').css('display', 'none');
+                $('.ttv').css('display', 'none');
+                $('.video').css('display', 'block');
+            }, 5000);
+            $('.jsx-2911075776').css('max-width', '100%');
+
+            $('.code_menu li').eq(0).click(function () {
+                $('.css').css('display', 'none');
+                $('.js').css('display', 'none');
+                $('.html').css('display', 'block');
+            });
+            $('.code_menu li').eq(1).click(function () {
+                $('.html').css('display', 'none');
+                $('.js').css('display', 'none');
+                $('.css').css('display', 'block');
+            });
+            $('.code_menu li').eq(2).click(function () {
+                $('.css').css('display', 'none');
+                $('.html').css('display', 'none');
+                $('.js').css('display', 'block');
+            });
         });
 
-        
- 
-
-        // text.addEventListener('mouseover',function(){
-        //     var text = document.querySelectorAll('.text');
-        // var tv = document.getElementsByClassName('video');
-        //    for (var i = 0; i < text.length; i++) {
-        //         tv[i].classList.remove('video1');
-        //         tv[i].classList.add('video2');
-        
-        // }
-        // })
-
-
-        // for (var i = 0; i < text.length; i++) {
-        //     text[i].addEventListener('mouseover', function () {
-        //         tv[i].classList.remove('video1');
-        //         tv[i].classList.add('video2');
-
-        //     })
-        // }
-        // for (var i = 0; i < text.length; i++) {
-        //     text[i].addEventListener('mouseleave', function () {
-        //         tv[i].classList.remove('video2');
-        //         tv[i].classList.add('video1');
-
-        //     })
-
-        // }
-
-
-
-
-
-
- 
     </script>
 </body>
 
