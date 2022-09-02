@@ -68,7 +68,7 @@
         <div class="about_box">876453121</div>
         <h1>About Me</h1>
         <div class="about">
-            <div class="star2"></div>
+            <div class="star star2"></div>
             <div class="shootingStarContainer">
                 <div class="shootingStar"></div>
                 <div class="shootingStar"></div>
@@ -495,14 +495,14 @@ function createStar() {
   star.style.color = getColor();
   star.style['animation-delay'] = `${getRandomInt(0, 5)}s`;
   star.style['animation-duration'] = `${getRandomInt(2, 4)}s`;
-  document.getElementsByClassName('star2')[0].appendChild(star);
+  document.getElementsByClassName('star')[0].appendChild(star);
 }
 
 function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
 }
 
-const starCount = 200;
+const starCount = 250;
 for (let i = 0; i < starCount; i++) {
   createStar();
 }

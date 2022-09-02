@@ -505,15 +505,17 @@ section {
  @include flex(flex,center,center,column);
  background-color: #17182f;
 }
-.star2 {
-    width:100%;
-    height:50%;
+.star {
     position: absolute;
     animation-name: twinkle;
     animation-direction: alternate;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
     user-select: none; 
+  }
+  .star2{
+    width:100%;
+    height:40%;
   }
  
 .my1{
