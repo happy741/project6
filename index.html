@@ -68,7 +68,47 @@
         <div class="about_box">876453121</div>
         <h1>About Me</h1>
         <div class="about">
-
+            <div class="star2"></div>
+            <div class="shootingStarContainer">
+                <div class="shootingStar"></div>
+                <div class="shootingStar"></div>
+                <div class="shootingStar"></div>
+                <div class="shootingStar"></div>
+                <div class="shootingStar"></div>
+                <div class="shootingStar"></div>
+                <div class="shootingStar"></div>
+                <div class="shootingStar"></div>
+                <div class="shootingStar"></div>
+                <div class="shootingStar"></div>
+            </div>
+            <div class="shootingStarContainer">
+                <div class="shootingStar"></div>
+                <div class="shootingStar"></div>
+                <div class="shootingStar"></div>
+                <div class="shootingStar"></div>
+                <div class="shootingStar"></div>
+                <div class="shootingStar"></div>
+                <div class="shootingStar"></div>
+                <div class="shootingStar"></div>
+                <div class="shootingStar"></div>
+                <div class="shootingStar"></div>
+            </div>
+            <div class="shootingStarContainer">
+                <div class="shootingStar"></div>
+                <div class="shootingStar"></div>
+                <div class="shootingStar"></div>
+                <div class="shootingStar"></div>
+                <div class="shootingStar"></div>
+                <div class="shootingStar"></div>
+                <div class="shootingStar"></div>
+                <div class="shootingStar"></div>
+                <div class="shootingStar"></div>
+                <div class="shootingStar"></div>
+            </div>
+            <div class="clouds"></div>
+            <div class="fogContainer">
+                <div class="fog"></div>
+            </div>
 
             <div class="my1">
                 <div class="pola">
@@ -423,6 +463,51 @@ code3[2].innerHTML=`
             });
         });
 
+
+        function getStarIcon() {
+  const chance = Math.random();
+  const starDistribution = [
+    [0.05, '•'],
+    [0.2, '*'],
+    [1, '.']
+  ];
+  const about=document.getElementsByClassName('about');
+  return starDistribution.find(dist => chance < dist[0])[1];
+}
+
+function getColor() {
+  const chance = Math.random();
+  const colorDistribution = [
+    [0.2, '#fce7a1'],
+    [0.4, '#f7c45e'],
+    [1, '#fdda68'],
+  ];
+  
+  return colorDistribution.find(dist => chance < dist[0])[1];
+}
+
+function createStar() {
+  const star = document.createElement('p');
+  star.innerHTML = getStarIcon();
+  star.className += 'star';
+  star.style.top = `${getRandomInt(0, window.innerHeight)}px`;
+    star.style.left = `${getRandomInt(0, window.innerWidth)}px`;
+  star.style.color = getColor();
+  star.style['animation-delay'] = `${getRandomInt(0, 5)}s`;
+  star.style['animation-duration'] = `${getRandomInt(2, 4)}s`;
+  document.getElementsByClassName('star2')[0].appendChild(star);
+}
+
+function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
+}
+
+const starCount = 200;
+for (let i = 0; i < starCount; i++) {
+  createStar();
+}
+
+        
     </script>
 </body>
 
