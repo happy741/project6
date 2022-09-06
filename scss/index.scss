@@ -43,10 +43,10 @@ $c: pointer;
     color: $col;
 }
 
-header {
+.main{
     width: $w;
-    height: 200vh;
-    background-color: #333;
+    height: 100vh;
+    background-color: rgb(18, 16, 39);
     @include flex(flex, center,center,row){
         flex-wrap: wrap;
     };
@@ -58,63 +58,7 @@ h1{
     text-align: center;
 
 }
-p{
 
-}
-
-}
-.h1_box{
-    width:100%;
-    height:100px;
-}
-.box1{
-    width:87%;
-    height:221px;
-    display: flex;
-    justify-content: space-between;
-}
-.box3{
-    width:87%;
-    height:500px;
-    display: flex;
-    justify-content: space-between;
-}
-.header_box{
-    width:400px;
-    height:300px;
-    @include bg('../img/high.jpg',cover,center);
-    border:1px solid #786ece;
-}
-.header_box2{
-
-
-    h1{
-    font-size: 7vw;
-    text-align: end;
-    color: #333;
-    text-shadow:
-     -1px -1px 0 #786ece,  
-      1px -1px 0 #786ece,
-      -1px 1px 0 #786ece,
-       1px 1px 0 #786ece;
-    }
-}
-.header_box3{
-    width:87%;
-    height:300px;
-    border:1px solid #786ece;
-    @include bg('../img/candy.png',cover,center);
-}
-.header_box4{
-    width:700px;
-    height:600px;
-    border:1px solid #786ece;
-    @include bg('../img/tape.jpg',cover,center);
-}
-.header_box5{
-    font-size: 30px;
-    font-weight: 800;
-    color:#786ece;
 }
 
 
@@ -140,7 +84,7 @@ section {
     width: $w;
     height: 4000px;
     position:relative;
-    margin-top:-74%;
+   
     color: white;
 
 }
@@ -569,7 +513,7 @@ section {
  @include flex(flex,center,center,column);
  background-color: #17182f;
 }
-.star {
+.star,.star2 {
     position: absolute;
     animation-name: twinkle;
     animation-direction: alternate;
@@ -577,10 +521,7 @@ section {
     animation-iteration-count: infinite;
     user-select: none; 
   }
-  .star2{
-    width:100%;
-    height:40%;
-  }
+  
  
 .my1{
    width:95%;

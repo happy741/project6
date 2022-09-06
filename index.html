@@ -16,7 +16,7 @@
 <body>
 
     <div id="wrap">
-
+            <div class="main"></div>
 
         <section>
 
@@ -520,15 +520,26 @@
 
         function createStar() {
             const star = document.createElement('p');
+            const star2 = document.createElement('p');
             star.innerHTML = getStarIcon();
+            star2.innerHTML = getStarIcon();
             star.className += 'star';
+            star2.className += 'star2';
             star.style.top = `${getRandomInt(0, 155)}%`;
             star.style.left = `${getRandomInt(0, 100)}%`;
+            star2.style.top = `${getRandomInt(0, 80)}%`;
+            star2.style.left = `${getRandomInt(0, 100)}%`;
             star.style.color = getColor();
+            star2.style.color = getColor();
             star.style.zIndex = -1;
+            star2.style.zIndex = 1;
             star.style['animation-delay'] = `${getRandomInt(0, 5)}s`;
             star.style['animation-duration'] = `${getRandomInt(2, 4)}s`;
+            star2.style['animation-delay'] = `${getRandomInt(0, 5)}s`;
+            star2.style['animation-duration'] = `${getRandomInt(2, 4)}s`;
             document.getElementsByClassName('star')[0].appendChild(star);
+            document.getElementsByClassName('main')[0].appendChild(star2);
+          
         }
 
         function getRandomInt(min, max) {
@@ -539,6 +550,7 @@
         for (let i = 0; i < starCount; i++) {
             createStar();
         }
+        
 
 
     </script>
