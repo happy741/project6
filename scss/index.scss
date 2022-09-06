@@ -46,27 +46,50 @@ $c: pointer;
 header {
     width: $w;
     height: 100vh;
-    background-color: antiquewhite;
     @include flex(flex,space-between,flex-end,column);
-    @include main(bage, "https://raw.githubusercontent.com/pizza3/asset/master/natureSmaller.png", 7100%, 100%, #333);
+   
 
-    animation: ani2 1.5s steps(70) forwards;
 h1{
-    font-size:10vw;
+    font-size:8vw;
 }
 
 }
 .film{
-    width:104%;
+    width:169%;
     height:250px;
 
-    img{
-        width:100%;
-        height:101%;
-        background-repeat: repeat-x;
-        
+    &:nth-child(1){
+       @include bg('../img/film3.png',contain,center){
+        background-repeat:repeat-x; 
+       };
+       transform: rotate(2deg) translateX(0px);
+       animation:film 10s linear infinite;
     }
+    &:nth-child(4){
+        @include bg('../img/film4.png',contain,center){
+            background-repeat:repeat-x;
+        };
+        transform: rotate(-2deg);
+        animation:film2 10s linear infinite;
+     }
 
+}
+#ro{
+    width:100px;
+    height:100px;
+    @include bg('../img/lo.png',contain,center);
+    position:absolute;
+    animation:rocket 15s linear infinite;
+
+    #fire{
+        position:absolute;
+        bottom:-15px;
+        left:-15px;
+        width:50px;
+        height:50px;
+        animation:fire 0.5s linear infinite alternate;
+        @include bg('../img/fire.png',contain,center);
+    }
 }
 
 h1 {
@@ -545,7 +568,7 @@ section {
     position:relative;
     @include flex(flex,space-around,center,row);
     border-radius:50%;
-    border: 2px dotted chartreuse;
+    border: 2px dotted white;
     &::before, &::after{
         content: "";
         position:absolute;
@@ -556,21 +579,21 @@ section {
         height:50px;
         bottom:-13%;
         left:49.5%;
-        border-right:2px dotted chartreuse;
+        border-right:2px dotted white;
     }
     &::after{
         width:13px;
         height:13px;
         left:48.5%;
         bottom:-2.5%;
-        background-color: chartreuse;
+        background-color: white;
         border-radius: 50%;;
     }
 }
 .photo{
     width:350px;
     height:350px;
-    background-color: chartreuse;
+    background-color: white;
     border-radius: 50%;
     &::before, &::after{
         content: "";
@@ -580,14 +603,14 @@ section {
     &::before{
         width:22px;
         height:22px;
-        border:2px solid chartreuse;
+        border:2px solid white;
         bottom:-20%;
         left:47%;
     }
     &::after{
         width:10px;
         height:10px;
-        background-color: chartreuse;
+        background-color: white;
         bottom:-18%;
         left:49%;
     }
@@ -620,6 +643,7 @@ section {
     color:white;
     h1{
         font-size: 70px;
+        font-family: 'HallymGothic-Regular';
     }
 }
 .my3{
@@ -854,7 +878,7 @@ $starCount: 10;
 
 .clouds {
     background: transparent url('https://wolf.drjm.co.uk/nightsky/clouds.png') repeat top center;
-    z-index: 3;
+    z-index: -1;
     height: 150%;
     animation: cloudsFrames 300s linear infinite;
     position: absolute;
@@ -881,7 +905,7 @@ $starCount: 10;
     width: 100vw;
     height: 100vh;
     overflow: hidden;
-    z-index: 7;
+    z-index:-1;
 }
 
 .fog {
@@ -895,6 +919,7 @@ $starCount: 10;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-direction: alternate;
+    z-index:-1;
     background: linear-gradient(-5deg, #{"#00000000 0%, #ffffff15 40%, #74590121 45%, #8b845b21 55%, #00000000 70%"});
 }
 
@@ -926,4 +951,27 @@ $starCount: 10;
     }
 
 }
+
+@keyframes film{
+    from{transform: translate(0,0) rotate(2deg)}
+    to{transform: translate(1000px,35px) rotate(2deg)}
+}
+
+@keyframes film2{
+    from{transform: translate(1000px,-35px) rotate(-2deg)}
+    to{transform: translate(0px,0) rotate(-2deg)}
+}
+
+@keyframes fire{
+    from{transform:scale(0.8);}
+    to{transform:scale(1)}
+}
+
+@keyframes rocket{
+    0%{transform: translate(-3000%,800%);}
+    50%{transform: translate(-1000%,600%);}
+    100%{transform: translate(0%);}
+}
+
+
   
