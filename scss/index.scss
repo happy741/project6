@@ -45,52 +45,78 @@ $c: pointer;
 
 header {
     width: $w;
-    height: 100vh;
-    @include flex(flex,space-between,flex-end,column);
+    height: 200vh;
+    background-color: #333;
+    @include flex(flex, center,center,row){
+        flex-wrap: wrap;
+    };
    
 
 h1{
-    font-size:8vw;
+    font-size:10vw;
+    color:#786ece;
+    text-align: center;
+
+}
+p{
+
 }
 
 }
-.film{
-    width:169%;
-    height:250px;
-
-    &:nth-child(1){
-       @include bg('../img/film3.png',contain,center){
-        background-repeat:repeat-x; 
-       };
-       transform: rotate(2deg) translateX(0px);
-       animation:film 10s linear infinite;
-    }
-    &:nth-child(4){
-        @include bg('../img/film4.png',contain,center){
-            background-repeat:repeat-x;
-        };
-        transform: rotate(-2deg);
-        animation:film2 10s linear infinite;
-     }
-
-}
-#ro{
-    width:100px;
+.h1_box{
+    width:100%;
     height:100px;
-    @include bg('../img/lo.png',contain,center);
-    position:absolute;
-    animation:rocket 15s linear infinite;
+}
+.box1{
+    width:87%;
+    height:221px;
+    display: flex;
+    justify-content: space-between;
+}
+.box3{
+    width:87%;
+    height:500px;
+    display: flex;
+    justify-content: space-between;
+}
+.header_box{
+    width:400px;
+    height:300px;
+    @include bg('../img/high.jpg',cover,center);
+    border:1px solid #786ece;
+}
+.header_box2{
 
-    #fire{
-        position:absolute;
-        bottom:-15px;
-        left:-15px;
-        width:50px;
-        height:50px;
-        animation:fire 0.5s linear infinite alternate;
-        @include bg('../img/fire.png',contain,center);
+
+    h1{
+    font-size: 7vw;
+    text-align: end;
+    color: #333;
+    text-shadow:
+     -1px -1px 0 #786ece,  
+      1px -1px 0 #786ece,
+      -1px 1px 0 #786ece,
+       1px 1px 0 #786ece;
     }
 }
+.header_box3{
+    width:87%;
+    height:300px;
+    border:1px solid #786ece;
+    @include bg('../img/candy.png',cover,center);
+}
+.header_box4{
+    width:700px;
+    height:600px;
+    border:1px solid #786ece;
+    @include bg('../img/tape.jpg',cover,center);
+}
+.header_box5{
+    font-size: 30px;
+    font-weight: 800;
+    color:#786ece;
+}
+
 
 h1 {
     font: {
@@ -114,7 +140,7 @@ section {
     width: $w;
     height: 4000px;
     position:relative;
-
+    margin-top:-74%;
     color: white;
 
 }
@@ -972,6 +998,7 @@ $starCount: 10;
     50%{transform: translate(-1000%,600%);}
     100%{transform: translate(0%);}
 }
+
 
 
   
