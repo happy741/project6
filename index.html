@@ -16,11 +16,24 @@
 <body>
 
     <div id="wrap">
-            <div class="main">
-                <h1>HWANG GI BBEUM</h1>
-                <h1>PORTFOLIO</h1>
-                <div id="house"></div>
+        <div class="main">
+            <shootingstar></shootingstar>
+            <shootingstar></shootingstar>
+            <shootingstar></shootingstar>
+            
+            <h1>HWANG GI BBEUM</h1>
+            <h1>PORTFOLIO</h1>
+            <div class="moon">
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
             </div>
+
+            <!-- <div class="tv">
+            </div> -->
+        </div>
 
         <section>
 
@@ -68,7 +81,7 @@
         <div class="about_box">876453121</div>
         <h1>About Me</h1>
         <div class="about">
-            <div class="star star3"></div>
+            <div class="star star2"></div>
             <div class="shootingStarContainer">
                 <div class="shootingStar"></div>
                 <div class="shootingStar"></div>
@@ -290,7 +303,6 @@
         Vue.component('section_com', {
             template:
                 `<div class="port_box">
-
                     <div class="port_box_right">
                      <div class='page'>  
                        <div class="music">
@@ -349,6 +361,25 @@
         new Vue({
             el: 'section'
         });
+
+        Vue.component('shootingstar',{
+            template:`    <div class="shootingStarContainer">
+                <div class="shootingStar"></div>
+                <div class="shootingStar"></div>
+                <div class="shootingStar"></div>
+                <div class="shootingStar"></div>
+                <div class="shootingStar"></div>
+                <div class="shootingStar"></div>
+                <div class="shootingStar"></div>
+                <div class="shootingStar"></div>
+                <div class="shootingStar"></div>
+                <div class="shootingStar"></div>
+            </div>`
+        });
+        new Vue({
+            el:'.main'
+        });
+        
 
         var img1 = document.querySelectorAll('.image');
         var img2 = document.querySelectorAll('.image1');
@@ -528,22 +559,22 @@
             star.innerHTML = getStarIcon();
             star2.innerHTML = getStarIcon();
             star.className += 'star';
-            star2.className += 'star2';
+            star2.className += 'star3';
             star.style.top = `${getRandomInt(0, 155)}%`;
+            star2.style.top = `${getRandomInt(0, 220)}%`;
             star.style.left = `${getRandomInt(0, 100)}%`;
-            star2.style.top = `${getRandomInt(0, 100)}%`;
             star2.style.left = `${getRandomInt(0, 100)}%`;
             star.style.color = getColor();
             star2.style.color = getColor();
             star.style.zIndex = -1;
             star2.style.zIndex = -1;
             star.style['animation-delay'] = `${getRandomInt(0, 5)}s`;
-            star.style['animation-duration'] = `${getRandomInt(2, 4)}s`;
             star2.style['animation-delay'] = `${getRandomInt(0, 5)}s`;
+            star.style['animation-duration'] = `${getRandomInt(2, 4)}s`;
             star2.style['animation-duration'] = `${getRandomInt(2, 4)}s`;
             document.getElementsByClassName('star')[0].appendChild(star);
             document.getElementsByClassName('main')[0].appendChild(star2);
-          
+
         }
 
         function getRandomInt(min, max) {
@@ -554,7 +585,6 @@
         for (let i = 0; i < starCount; i++) {
             createStar();
         }
-        
 
 
     </script>
