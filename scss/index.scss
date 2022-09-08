@@ -1,8 +1,5 @@
 @charset "UTF-8";
 
-@import url('https://fonts.googleapis.com/css?family=Black+Han+Sans:400');
-@import url('https://fonts.googleapis.com/css?family=Black+Han+Sans&display=swap&subset=korean');
-@import url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2204@1.0/HallymGothic-Regular.woff2');
 
 
 // font-family: 'Black Han Sans', 'sans-serif';
@@ -133,31 +130,41 @@ $moon-shine: rgba(157, 229, 253, 0.59);
 		animation-delay:2s;
 	}
 }
-.tv{
-    width:350px;
-    height:350px;
-    margin-left:35%;
-    animation:tvv 5s ease-in-out;
-    @include bg('../img/tvv.png',cover,center);
+// .tv{
+//     width:350px;
+//     height:350px;
+//     margin-left:35%;
+//     animation:tvv 5s ease-in-out;
+//     @include bg('../img/tvv.png',cover,center);
+// }
+.ufoo{
+    position:absolute;
+    width:1300px;
+    height:500px;
+    transition:1s ease;
+    top:300px;
+    left:-1000px;
 }
 
-h1 {
-    font: {
-        family: 'Black Han Sans', 'sans-serif';
-        size: 5vw;
+#beam{opacity: 0;}
 
+.line{
+    width:70px;
+    height:1px;
+    background-color: #fff;
+    top: 700px;
+    position: absolute;
+    left: 360px;
+    box-shadow: 0px 0px 9px 2px #fff;
+    transform-origin: right;
+    transition:$t;
+    &:nth-of-type(2){
+        top:720px;
     }
-
+    &:nth-of-type(3){
+        top:740px;
+    }
 }
-
-p{
-    font-family: 'HallymGothic-Regular';
-    margin: 0;
-    font-size: 24px;
-
-}
-
-
 
 section {
     width: $w;
@@ -892,7 +899,7 @@ $starCount: 10;
             height: 62%;
             transform: rotate(random(10)+35deg);
             z-index: 10;
-            //    background-color: #30000080;
+      
         }
     }
 }
@@ -1035,4 +1042,18 @@ $starCount: 10;
     to{transform: translate3d(0px,0px,0px) scale(1)}
 }
 
-  
+// @keyframes ufo{
+//     0%{transform:translate3d(1300px,1650px, 0px)}
+//    20%{transform:translate3d(1300px,1650px, 0px)}
+//    40%{transform:translate3d(1300px,1650px, 0px)}
+//    50%{transform:translate3d(1300px,1670px, 0px)}
+//    60%{transform:translate3d(1300px,1650px, 0px)}
+//    80%{transform:translate3d(1300px,1670px, 0px)}
+//    100%{transform:translate3d(1300px,1670px, 0px)}
+// }
+
+
+
+
+
+
