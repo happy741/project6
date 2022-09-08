@@ -105,6 +105,19 @@ ul, li, ol {
           animation-delay: 2s;
 }
 
+.tv {
+  width: 202px;
+  height: 187px;
+  position: absolute;
+  background-image: url("../img/tvv.png");
+  background-size: cover;
+  background-position: center;
+  top: 2516px;
+  left: 817px;
+  z-index: 9;
+  transform: scale(0);
+}
+
 .ufoo {
   position: absolute;
   width: 1300px;
@@ -115,7 +128,7 @@ ul, li, ol {
 }
 
 #beam {
-  opacity: 0;
+  transform: scaleY(0);
 }
 
 .line {
@@ -576,7 +589,7 @@ section {
   width: 100%;
   height: 121px;
   display: flex;
-  margin-top: -30%;
+  margin-top: -60%;
   justify-content: center;
   font-size: 50px;
 }
@@ -987,21 +1000,21 @@ section {
   position: absolute;
   width: 100%;
   height: 62%;
-  transform: rotate(44deg);
+  transform: rotate(45deg);
   z-index: 10;
 }
 .shootingStarContainer:nth-child(2) {
   position: absolute;
   width: 100%;
   height: 62%;
-  transform: rotate(38deg);
+  transform: rotate(44deg);
   z-index: 10;
 }
 .shootingStarContainer:nth-child(3) {
   position: absolute;
   width: 100%;
   height: 62%;
-  transform: rotate(41deg);
+  transform: rotate(43deg);
   z-index: 10;
 }
 
@@ -1011,214 +1024,214 @@ section {
   background: linear-gradient(-70deg, rgb(255, 235, 235), rgb(0, 0, 0));
 }
 .shootingStarContainer:nth-child(1) .shootingStar:nth-child(1) {
-  left: calc(6%);
-  top: calc(26%);
-  -webkit-animation: shootingFrames 1204ms ease-in-out 55900ms;
-          animation: shootingFrames 1204ms ease-in-out 55900ms;
-  opacity: 0.27;
+  left: calc(23%);
+  top: calc(23%);
+  -webkit-animation: shootingFrames 2006ms ease-in-out 27868ms;
+          animation: shootingFrames 2006ms ease-in-out 27868ms;
+  opacity: 0.6;
 }
 .shootingStarContainer:nth-child(1) .shootingStar:nth-child(2) {
-  left: calc(40%);
-  top: calc(19%);
-  -webkit-animation: shootingFrames 1150ms ease-in-out 34124ms;
-          animation: shootingFrames 1150ms ease-in-out 34124ms;
-  opacity: 0.82;
+  left: calc(13%);
+  top: calc(38%);
+  -webkit-animation: shootingFrames 2412ms ease-in-out 23270ms;
+          animation: shootingFrames 2412ms ease-in-out 23270ms;
+  opacity: 0.7;
 }
 .shootingStarContainer:nth-child(1) .shootingStar:nth-child(3) {
-  left: calc(13%);
-  top: calc(99%);
-  -webkit-animation: shootingFrames 2184ms ease-in-out 30093ms;
-          animation: shootingFrames 2184ms ease-in-out 30093ms;
-  opacity: 0.67;
+  left: calc(15%);
+  top: calc(94%);
+  -webkit-animation: shootingFrames 1530ms ease-in-out 37214ms;
+          animation: shootingFrames 1530ms ease-in-out 37214ms;
+  opacity: 0.4;
 }
 .shootingStarContainer:nth-child(1) .shootingStar:nth-child(4) {
-  left: calc(43%);
-  top: calc(99%);
-  -webkit-animation: shootingFrames 1396ms ease-in-out 43347ms;
-          animation: shootingFrames 1396ms ease-in-out 43347ms;
-  opacity: 0.56;
+  left: calc(18%);
+  top: calc(12%);
+  -webkit-animation: shootingFrames 2010ms ease-in-out 42452ms;
+          animation: shootingFrames 2010ms ease-in-out 42452ms;
+  opacity: 0.22;
 }
 .shootingStarContainer:nth-child(1) .shootingStar:nth-child(5) {
-  left: calc(24%);
-  top: calc(12%);
-  -webkit-animation: shootingFrames 1654ms ease-in-out 6846ms;
-          animation: shootingFrames 1654ms ease-in-out 6846ms;
-  opacity: 0.61;
+  left: calc(41%);
+  top: calc(18%);
+  -webkit-animation: shootingFrames 2672ms ease-in-out 11641ms;
+          animation: shootingFrames 2672ms ease-in-out 11641ms;
+  opacity: 0.68;
 }
 .shootingStarContainer:nth-child(1) .shootingStar:nth-child(6) {
-  left: calc(14%);
-  top: calc(46%);
-  -webkit-animation: shootingFrames 2230ms ease-in-out 9525ms;
-          animation: shootingFrames 2230ms ease-in-out 9525ms;
-  opacity: 0.47;
-}
-.shootingStarContainer:nth-child(1) .shootingStar:nth-child(7) {
-  left: calc(34%);
-  top: calc(55%);
-  -webkit-animation: shootingFrames 1139ms ease-in-out 37299ms;
-          animation: shootingFrames 1139ms ease-in-out 37299ms;
-  opacity: 0.9;
-}
-.shootingStarContainer:nth-child(1) .shootingStar:nth-child(8) {
-  left: calc(32%);
-  top: calc(83%);
-  -webkit-animation: shootingFrames 1493ms ease-in-out 53253ms;
-          animation: shootingFrames 1493ms ease-in-out 53253ms;
-  opacity: 0.65;
-}
-.shootingStarContainer:nth-child(1) .shootingStar:nth-child(9) {
-  left: calc(28%);
-  top: calc(4%);
-  -webkit-animation: shootingFrames 2194ms ease-in-out 24072ms;
-          animation: shootingFrames 2194ms ease-in-out 24072ms;
-  opacity: 0.71;
-}
-.shootingStarContainer:nth-child(1) .shootingStar:nth-child(10) {
-  left: calc(2%);
-  top: calc(24%);
-  -webkit-animation: shootingFrames 1101ms ease-in-out 37386ms;
-          animation: shootingFrames 1101ms ease-in-out 37386ms;
-  opacity: 0.88;
-}
-.shootingStarContainer:nth-child(2) .shootingStar:nth-child(1) {
-  left: calc(13%);
-  top: calc(27%);
-  -webkit-animation: shootingFrames 2459ms ease-in-out 24895ms;
-          animation: shootingFrames 2459ms ease-in-out 24895ms;
-  opacity: 0.83;
-}
-.shootingStarContainer:nth-child(2) .shootingStar:nth-child(2) {
-  left: calc(15%);
-  top: calc(22%);
-  -webkit-animation: shootingFrames 1017ms ease-in-out 26688ms;
-          animation: shootingFrames 1017ms ease-in-out 26688ms;
-  opacity: 0.19;
-}
-.shootingStarContainer:nth-child(2) .shootingStar:nth-child(3) {
-  left: calc(40%);
-  top: calc(60%);
-  -webkit-animation: shootingFrames 2190ms ease-in-out 39721ms;
-          animation: shootingFrames 2190ms ease-in-out 39721ms;
-  opacity: 0.39;
-}
-.shootingStarContainer:nth-child(2) .shootingStar:nth-child(4) {
-  left: calc(31%);
-  top: calc(72%);
-  -webkit-animation: shootingFrames 2731ms ease-in-out 34171ms;
-          animation: shootingFrames 2731ms ease-in-out 34171ms;
-  opacity: 0.45;
-}
-.shootingStarContainer:nth-child(2) .shootingStar:nth-child(5) {
-  left: calc(8%);
-  top: calc(88%);
-  -webkit-animation: shootingFrames 1691ms ease-in-out 27201ms;
-          animation: shootingFrames 1691ms ease-in-out 27201ms;
-  opacity: 0.35;
-}
-.shootingStarContainer:nth-child(2) .shootingStar:nth-child(6) {
-  left: calc(46%);
-  top: calc(22%);
-  -webkit-animation: shootingFrames 2600ms ease-in-out 35306ms;
-          animation: shootingFrames 2600ms ease-in-out 35306ms;
-  opacity: 0.29;
-}
-.shootingStarContainer:nth-child(2) .shootingStar:nth-child(7) {
-  left: calc(5%);
-  top: calc(10%);
-  -webkit-animation: shootingFrames 2100ms ease-in-out 18497ms;
-          animation: shootingFrames 2100ms ease-in-out 18497ms;
-  opacity: 0.54;
-}
-.shootingStarContainer:nth-child(2) .shootingStar:nth-child(8) {
-  left: calc(37%);
-  top: calc(18%);
-  -webkit-animation: shootingFrames 1911ms ease-in-out 30052ms;
-          animation: shootingFrames 1911ms ease-in-out 30052ms;
-  opacity: 0.28;
-}
-.shootingStarContainer:nth-child(2) .shootingStar:nth-child(9) {
-  left: calc(29%);
-  top: calc(69%);
-  -webkit-animation: shootingFrames 2243ms ease-in-out 49909ms;
-          animation: shootingFrames 2243ms ease-in-out 49909ms;
-  opacity: 0.58;
-}
-.shootingStarContainer:nth-child(2) .shootingStar:nth-child(10) {
-  left: calc(37%);
-  top: calc(11%);
-  -webkit-animation: shootingFrames 2612ms ease-in-out 58410ms;
-          animation: shootingFrames 2612ms ease-in-out 58410ms;
-  opacity: 0.27;
-}
-.shootingStarContainer:nth-child(3) .shootingStar:nth-child(1) {
-  left: calc(24%);
-  top: calc(80%);
-  -webkit-animation: shootingFrames 1309ms ease-in-out 6539ms;
-          animation: shootingFrames 1309ms ease-in-out 6539ms;
-  opacity: 0.19;
-}
-.shootingStarContainer:nth-child(3) .shootingStar:nth-child(2) {
-  left: calc(3%);
-  top: calc(23%);
-  -webkit-animation: shootingFrames 1416ms ease-in-out 57060ms;
-          animation: shootingFrames 1416ms ease-in-out 57060ms;
-  opacity: 0.43;
-}
-.shootingStarContainer:nth-child(3) .shootingStar:nth-child(3) {
-  left: calc(40%);
-  top: calc(38%);
-  -webkit-animation: shootingFrames 808ms ease-in-out 46833ms;
-          animation: shootingFrames 808ms ease-in-out 46833ms;
-  opacity: 0.77;
-}
-.shootingStarContainer:nth-child(3) .shootingStar:nth-child(4) {
-  left: calc(2%);
-  top: calc(31%);
-  -webkit-animation: shootingFrames 1924ms ease-in-out 19540ms;
-          animation: shootingFrames 1924ms ease-in-out 19540ms;
-  opacity: 0.59;
-}
-.shootingStarContainer:nth-child(3) .shootingStar:nth-child(5) {
-  left: calc(27%);
-  top: calc(75%);
-  -webkit-animation: shootingFrames 1021ms ease-in-out 33994ms;
-          animation: shootingFrames 1021ms ease-in-out 33994ms;
-  opacity: 0.45;
-}
-.shootingStarContainer:nth-child(3) .shootingStar:nth-child(6) {
-  left: calc(50%);
-  top: calc(28%);
-  -webkit-animation: shootingFrames 1865ms ease-in-out 26018ms;
-          animation: shootingFrames 1865ms ease-in-out 26018ms;
-  opacity: 0.9;
-}
-.shootingStarContainer:nth-child(3) .shootingStar:nth-child(7) {
-  left: calc(10%);
-  top: calc(17%);
-  -webkit-animation: shootingFrames 758ms ease-in-out 34684ms;
-          animation: shootingFrames 758ms ease-in-out 34684ms;
-  opacity: 0.55;
-}
-.shootingStarContainer:nth-child(3) .shootingStar:nth-child(8) {
-  left: calc(44%);
-  top: calc(26%);
-  -webkit-animation: shootingFrames 2229ms ease-in-out 4943ms;
-          animation: shootingFrames 2229ms ease-in-out 4943ms;
-  opacity: 0.88;
-}
-.shootingStarContainer:nth-child(3) .shootingStar:nth-child(9) {
-  left: calc(43%);
-  top: calc(90%);
-  -webkit-animation: shootingFrames 1698ms ease-in-out 44621ms;
-          animation: shootingFrames 1698ms ease-in-out 44621ms;
+  left: calc(6%);
+  top: calc(41%);
+  -webkit-animation: shootingFrames 1580ms ease-in-out 10955ms;
+          animation: shootingFrames 1580ms ease-in-out 10955ms;
   opacity: 0.78;
 }
-.shootingStarContainer:nth-child(3) .shootingStar:nth-child(10) {
-  left: calc(7%);
-  top: calc(11%);
-  -webkit-animation: shootingFrames 2437ms ease-in-out 5184ms;
-          animation: shootingFrames 2437ms ease-in-out 5184ms;
+.shootingStarContainer:nth-child(1) .shootingStar:nth-child(7) {
+  left: calc(3%);
+  top: calc(31%);
+  -webkit-animation: shootingFrames 803ms ease-in-out 49276ms;
+          animation: shootingFrames 803ms ease-in-out 49276ms;
+  opacity: 0.23;
+}
+.shootingStarContainer:nth-child(1) .shootingStar:nth-child(8) {
+  left: calc(4%);
+  top: calc(98%);
+  -webkit-animation: shootingFrames 2140ms ease-in-out 6962ms;
+          animation: shootingFrames 2140ms ease-in-out 6962ms;
+  opacity: 0.21;
+}
+.shootingStarContainer:nth-child(1) .shootingStar:nth-child(9) {
+  left: calc(25%);
+  top: calc(99%);
+  -webkit-animation: shootingFrames 2016ms ease-in-out 1130ms;
+          animation: shootingFrames 2016ms ease-in-out 1130ms;
+  opacity: 0.51;
+}
+.shootingStarContainer:nth-child(1) .shootingStar:nth-child(10) {
+  left: calc(20%);
+  top: calc(88%);
+  -webkit-animation: shootingFrames 1612ms ease-in-out 45052ms;
+          animation: shootingFrames 1612ms ease-in-out 45052ms;
   opacity: 0.28;
+}
+.shootingStarContainer:nth-child(2) .shootingStar:nth-child(1) {
+  left: calc(41%);
+  top: calc(16%);
+  -webkit-animation: shootingFrames 2551ms ease-in-out 4089ms;
+          animation: shootingFrames 2551ms ease-in-out 4089ms;
+  opacity: 0.53;
+}
+.shootingStarContainer:nth-child(2) .shootingStar:nth-child(2) {
+  left: calc(6%);
+  top: calc(19%);
+  -webkit-animation: shootingFrames 2667ms ease-in-out 17080ms;
+          animation: shootingFrames 2667ms ease-in-out 17080ms;
+  opacity: 0.6;
+}
+.shootingStarContainer:nth-child(2) .shootingStar:nth-child(3) {
+  left: calc(5%);
+  top: calc(53%);
+  -webkit-animation: shootingFrames 821ms ease-in-out 12046ms;
+          animation: shootingFrames 821ms ease-in-out 12046ms;
+  opacity: 0.82;
+}
+.shootingStarContainer:nth-child(2) .shootingStar:nth-child(4) {
+  left: calc(5%);
+  top: calc(83%);
+  -webkit-animation: shootingFrames 2147ms ease-in-out 50269ms;
+          animation: shootingFrames 2147ms ease-in-out 50269ms;
+  opacity: 0.82;
+}
+.shootingStarContainer:nth-child(2) .shootingStar:nth-child(5) {
+  left: calc(17%);
+  top: calc(83%);
+  -webkit-animation: shootingFrames 2307ms ease-in-out 38382ms;
+          animation: shootingFrames 2307ms ease-in-out 38382ms;
+  opacity: 0.24;
+}
+.shootingStarContainer:nth-child(2) .shootingStar:nth-child(6) {
+  left: calc(32%);
+  top: calc(85%);
+  -webkit-animation: shootingFrames 1462ms ease-in-out 21957ms;
+          animation: shootingFrames 1462ms ease-in-out 21957ms;
+  opacity: 0.83;
+}
+.shootingStarContainer:nth-child(2) .shootingStar:nth-child(7) {
+  left: calc(47%);
+  top: calc(77%);
+  -webkit-animation: shootingFrames 1431ms ease-in-out 51053ms;
+          animation: shootingFrames 1431ms ease-in-out 51053ms;
+  opacity: 0.84;
+}
+.shootingStarContainer:nth-child(2) .shootingStar:nth-child(8) {
+  left: calc(28%);
+  top: calc(14%);
+  -webkit-animation: shootingFrames 2677ms ease-in-out 10702ms;
+          animation: shootingFrames 2677ms ease-in-out 10702ms;
+  opacity: 0.9;
+}
+.shootingStarContainer:nth-child(2) .shootingStar:nth-child(9) {
+  left: calc(39%);
+  top: calc(32%);
+  -webkit-animation: shootingFrames 1073ms ease-in-out 28466ms;
+          animation: shootingFrames 1073ms ease-in-out 28466ms;
+  opacity: 0.19;
+}
+.shootingStarContainer:nth-child(2) .shootingStar:nth-child(10) {
+  left: calc(17%);
+  top: calc(19%);
+  -webkit-animation: shootingFrames 1689ms ease-in-out 7662ms;
+          animation: shootingFrames 1689ms ease-in-out 7662ms;
+  opacity: 0.58;
+}
+.shootingStarContainer:nth-child(3) .shootingStar:nth-child(1) {
+  left: calc(40%);
+  top: calc(62%);
+  -webkit-animation: shootingFrames 1001ms ease-in-out 53004ms;
+          animation: shootingFrames 1001ms ease-in-out 53004ms;
+  opacity: 0.9;
+}
+.shootingStarContainer:nth-child(3) .shootingStar:nth-child(2) {
+  left: calc(42%);
+  top: calc(60%);
+  -webkit-animation: shootingFrames 1059ms ease-in-out 56632ms;
+          animation: shootingFrames 1059ms ease-in-out 56632ms;
+  opacity: 0.59;
+}
+.shootingStarContainer:nth-child(3) .shootingStar:nth-child(3) {
+  left: calc(39%);
+  top: calc(58%);
+  -webkit-animation: shootingFrames 1488ms ease-in-out 54653ms;
+          animation: shootingFrames 1488ms ease-in-out 54653ms;
+  opacity: 0.4;
+}
+.shootingStarContainer:nth-child(3) .shootingStar:nth-child(4) {
+  left: calc(14%);
+  top: calc(92%);
+  -webkit-animation: shootingFrames 2385ms ease-in-out 2552ms;
+          animation: shootingFrames 2385ms ease-in-out 2552ms;
+  opacity: 0.69;
+}
+.shootingStarContainer:nth-child(3) .shootingStar:nth-child(5) {
+  left: calc(5%);
+  top: calc(23%);
+  -webkit-animation: shootingFrames 1309ms ease-in-out 2139ms;
+          animation: shootingFrames 1309ms ease-in-out 2139ms;
+  opacity: 0.77;
+}
+.shootingStarContainer:nth-child(3) .shootingStar:nth-child(6) {
+  left: calc(10%);
+  top: calc(40%);
+  -webkit-animation: shootingFrames 1496ms ease-in-out 59220ms;
+          animation: shootingFrames 1496ms ease-in-out 59220ms;
+  opacity: 0.19;
+}
+.shootingStarContainer:nth-child(3) .shootingStar:nth-child(7) {
+  left: calc(31%);
+  top: calc(33%);
+  -webkit-animation: shootingFrames 2140ms ease-in-out 2146ms;
+          animation: shootingFrames 2140ms ease-in-out 2146ms;
+  opacity: 0.51;
+}
+.shootingStarContainer:nth-child(3) .shootingStar:nth-child(8) {
+  left: calc(25%);
+  top: calc(54%);
+  -webkit-animation: shootingFrames 2118ms ease-in-out 44045ms;
+          animation: shootingFrames 2118ms ease-in-out 44045ms;
+  opacity: 0.57;
+}
+.shootingStarContainer:nth-child(3) .shootingStar:nth-child(9) {
+  left: calc(23%);
+  top: calc(69%);
+  -webkit-animation: shootingFrames 1251ms ease-in-out 10085ms;
+          animation: shootingFrames 1251ms ease-in-out 10085ms;
+  opacity: 0.87;
+}
+.shootingStarContainer:nth-child(3) .shootingStar:nth-child(10) {
+  left: calc(23%);
+  top: calc(61%);
+  -webkit-animation: shootingFrames 971ms ease-in-out 32453ms;
+          animation: shootingFrames 971ms ease-in-out 32453ms;
+  opacity: 0.59;
 }
 
 @-webkit-keyframes shootingFrames {
@@ -1231,7 +1244,7 @@ section {
   }
   100% {
     width: 0;
-    transform: translateX(894px);
+    transform: translateX(816px);
   }
 }
 
@@ -1245,7 +1258,7 @@ section {
   }
   100% {
     width: 0;
-    transform: translateX(894px);
+    transform: translateX(816px);
   }
 }
 .clouds {
@@ -1349,89 +1362,61 @@ section {
     transform: none;
   }
 }
-@-webkit-keyframes film {
-  from {
-    transform: translate(0, 0) rotate(2deg);
-  }
-  to {
-    transform: translate(1000px, 35px) rotate(2deg);
-  }
-}
-@keyframes film {
-  from {
-    transform: translate(0, 0) rotate(2deg);
-  }
-  to {
-    transform: translate(1000px, 35px) rotate(2deg);
-  }
-}
-@-webkit-keyframes film2 {
-  from {
-    transform: translate(1000px, -35px) rotate(-2deg);
-  }
-  to {
-    transform: translate(0px, 0) rotate(-2deg);
-  }
-}
-@keyframes film2 {
-  from {
-    transform: translate(1000px, -35px) rotate(-2deg);
-  }
-  to {
-    transform: translate(0px, 0) rotate(-2deg);
-  }
-}
-@-webkit-keyframes fire {
-  from {
-    transform: scale(0.8);
-  }
-  to {
-    transform: scale(1);
-  }
-}
-@keyframes fire {
-  from {
-    transform: scale(0.8);
-  }
-  to {
-    transform: scale(1);
-  }
-}
-@-webkit-keyframes rocket {
-  0% {
-    transform: translate(-3000%, 800%);
-  }
-  50% {
-    transform: translate(-1000%, 600%);
-  }
-  100% {
-    transform: translate(0%);
-  }
-}
-@keyframes rocket {
-  0% {
-    transform: translate(-3000%, 800%);
-  }
-  50% {
-    transform: translate(-1000%, 600%);
-  }
-  100% {
-    transform: translate(0%);
-  }
-}
 @-webkit-keyframes tvv {
-  from {
+  0% {
     transform: translate3d(0px, 0px, 0px) scale(0);
   }
-  to {
-    transform: translate3d(0px, 0px, 0px) scale(1);
+  80% {
+    transform: translate3d(0px, 800px, 0px) scale(1);
+  }
+  100% {
+    display: none;
   }
 }
 @keyframes tvv {
-  from {
+  0% {
     transform: translate3d(0px, 0px, 0px) scale(0);
   }
-  to {
-    transform: translate3d(0px, 0px, 0px) scale(1);
+  80% {
+    transform: translate3d(0px, 800px, 0px) scale(1);
+  }
+  100% {
+    display: none;
+  }
+}
+@-webkit-keyframes ufo {
+  0% {
+    transform: translate3d(1300px, 1650px, 0px);
+  }
+  100% {
+    transform: translate3d(1300px, 1670px, 0px);
+  }
+}
+@keyframes ufo {
+  0% {
+    transform: translate3d(1300px, 1650px, 0px);
+  }
+  100% {
+    transform: translate3d(1300px, 1670px, 0px);
+  }
+}
+@-webkit-keyframes ufo2 {
+  0% {
+    transform: scaleX(0);
+    transform-origin: top;
+  }
+  100% {
+    transform: scaleX(1);
+    transform-origin: top;
+  }
+}
+@keyframes ufo2 {
+  0% {
+    transform: scaleX(0);
+    transform-origin: top;
+  }
+  100% {
+    transform: scaleX(1);
+    transform-origin: top;
   }
 }

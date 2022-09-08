@@ -37,6 +37,9 @@
             <!-- <div class="line"></div>
             <div class="line"></div>
             <div class="line"></div> -->
+            
+            <div class="tv">
+            </div>
             <div class="ufoo">
                 <svg viewBox="0 0 400 250" aria-labelledby="title" role="img">
                     <title id="title">spaceship</title>
@@ -308,7 +311,7 @@
         $(document).ready(function () {
             $(window).scroll(function () {
                 $('#sec_box').css("opacity", 0 + $(window).scrollTop() / 800)
-                $('.video').css("opacity", 3 - $(window).scrollTop() / 1800)
+                $('.video').css("opacity", 3 - $(window).scrollTop() / 1500)
             })
         });
 
@@ -319,25 +322,30 @@
                 $('.port_box').eq(index).css({ transform: 'translate(0)' },);
                 console.log(index);
                 $('.next').click(function () {
+                    index++;
                     if (index > 4) {
                         index = 4;
                     }
                     $('.port_box').css({ transform: 'translate(-100%)' });
-                    $('.port_box').eq(index++).css({ transform: 'translate(0)' });
+                    $('.port_box').eq(index).css({ transform: 'translate(0)' });
 
                 });
                 $('.prev').click(function () {
+                    index--;
                     if (index < 0) {
                         index = 0;
                     }
                     $('.port_box').css({ transform: 'translate(-100%)' });
-                    $('.port_box').eq(index--).css({ transform: 'translate(0)' });
+                    $('.port_box').eq(index).css({ transform: 'translate(0)' });
                 });
             });
 
 
             $('.close').click(function () {
                 $('.port_box').css({ transform: 'translate(-100%)' });
+                $('.css').css('display', 'none');
+                $('.js').css('display', 'none');
+                $('.html').css('display', 'block');
             });
         });
 
@@ -482,6 +490,13 @@
         link2[0].href = 'https://happy741.github.io/project1/';
         link[1].href = 'https://happy741.github.io/project2/';
         link2[1].href = 'https://happy741.github.io/project2/';
+        link[2].href = 'https://happy741.github.io/project3/';
+        link2[2].href = 'https://happy741.github.io/project3/';
+        link[3].href = 'https://happy741.github.io/project4/index2.html';
+        link2[3].href = 'https://happy741.github.io/project4/index2.html';
+        link[4].href = 'https://happy741.github.io/project5/';
+        link2[4].href = 'https://happy741.github.io/project5/';
+
         h1[0].innerText = 'MUSICON'
         code[0].innerHTML = `<iframe
   src="https://carbon.now.sh/embed?bg=rgba%28171%2C+184%2C+195%2C+1%29&t=seti&wt=sharp&l=auto&width=680&ds=true&dsyoff=41px&dsblur=52px&wc=true&wa=true&pv=0px&ph=0px&ln=false&fl=1&fm=Hack&fs=14px&lh=152%25&si=false&es=2x&wm=false&code=%253Cdiv%2520id%253D%2522new%2522%253E%250A%2520%2520%2520%2520%2520%2520%253Ch1%253ENEW%2520ARRIWALS%2520%253C%252Fh1%253E%250A%2520%2520%2520%2520%2520%2520%253Cdiv%2520class%253D%2522strap%2520m1%2522%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Ca%2520href%253D%2522sub.html%2522%253E%2520%253Cimg%2520src%253D%2522img%252Fstrap.png%2522%2520alt%253D%2522strap%2522%253E%253C%252Fa%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Cdiv%2520class%253D%2522line1%2522%253E%253C%252Fdiv%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Cdiv%2520class%253D%2522line2%2522%253E%253C%252Fdiv%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Cdiv%2520class%253D%2522line3%2522%253E%253C%252Fdiv%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Cdiv%2520class%253D%2522line4%2522%253E%253C%252Fdiv%253E%250A%2520%2520%2520%2520%2520%2520%253C%252Fdiv%253E%250A%2520%2520%2520%2520%2520%2520%253Cdiv%2520class%253D%2522app%2522%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Ca%2520href%253D%2522sub.html%2522%253E%2520%253Cimg%2520src%253D%2522img%252Fl.png%2522%2520alt%253D%2522lecord%2522%253E%253C%252Fa%253E%250A%2520%2520%2520%2520%2520%2520%253C%252Fdiv%253E%250A%2520%2520%2520%2520%2520%2520%253Cdiv%2520id%253D%2522strap%2522%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Ca%2520href%253D%2522sub.html%2522%253E%2520%253Cimg%2520src%253D%2522img%252Fp.png%2522%2520alt%253D%2522pick%2522%253E%253C%252Fa%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Cdiv%2520id%253D%2522line1%2522%253E%253C%252Fdiv%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Cdiv%2520id%253D%2522line2%2522%253E%253C%252Fdiv%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Cdiv%2520id%253D%2522line3%2522%253E%253C%252Fdiv%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Cdiv%2520id%253D%2522line4%2522%253E%253C%252Fdiv%253E%250A%2520%2520%2520%2520%2520%2520%253C%252Fdiv%253E%250A%2520%2520%2520%2520%2520%2520%253Cdiv%2520id%253D%2522app%2522%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Ca%2520href%253D%2522sub.html%2522%253E%2520%253Cimg%2520src%253D%2522img%252Fapp.png%2522%2520alt%253D%2522app%2522%253E%253C%252Fa%253E%250A%2520%2520%2520%2520%2520%2520%253C%252Fdiv%253E%250A%2520%2520%253C%252Fdiv%253E"
@@ -670,13 +685,17 @@ let delta;
                     $(".ufoo").css("transform","translate3d("+num*+700+"px,"+"0px, 0px)");
                     
                 }if(num>=9){
-                    $(".ufoo").css("transform","translate3d("+num*-50+"px,"+"1200px, 0px)");
+                    $(".ufoo").css("transform","translate3d("+num*-1+"px,"+"1200px, 0px)");
                 }if(num>=14){
-                    $(".ufoo").css("transform","translate3d("+num*+300+"px,"+"1500px, 0px)");
+                    $(".ufoo").css("transform","translate3d("+num*+200+"px,"+"1500px, 0px)");
                 }
-                // if(num>=19){
-                //     $(".ufoo").css("transform","translate3d(1300px,"+"1950px, 0px)");
-                // }
+            
+                if(num>=19){
+                    $(".ufoo").css("transform","translate3d(1300px,1650px, 0px)");
+                    $("#beam").css("animation",'ufo2 5s ease');
+                    $('.tv').css('animation','tvv 5s ease forwards');
+                    $('.tv').css('animation-delay','1s');
+                }
                 
                 
             }
@@ -686,7 +705,17 @@ let delta;
                 num--;
                 $(".ufoo").css("transform","translate3d("+num*-1+"px,"+"0px, 0px)");
 
+            } 
+            if(num>=9){
+                    $(".ufoo").css("transform","translate3d("+num*+50+"px,"+"1200px, 0px)");
             }
+            if(num>=14){
+                    $(".ufoo").css("transform","translate3d("+num*+300+"px,"+"1500px, 0px)");
+            }if(num>=19){
+                    $(".ufoo").css("transform","translate3d(1300px,1650px, 0px)");
+                    $("#beam").animate("transform","scaleY(1)");
+               
+                }
         }
     console.log('스크롤',num);
     console.log('idx',idx);

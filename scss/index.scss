@@ -130,13 +130,16 @@ $moon-shine: rgba(157, 229, 253, 0.59);
 		animation-delay:2s;
 	}
 }
-// .tv{
-//     width:350px;
-//     height:350px;
-//     margin-left:35%;
-//     animation:tvv 5s ease-in-out;
-//     @include bg('../img/tvv.png',cover,center);
-// }
+.tv{
+    width:202px;
+    height:187px;
+    position:absolute;
+    @include bg('../img/tvv.png',cover,center);
+    top:2516px;
+    left:817px;
+    z-index: 9;
+    transform: scale(0);
+}
 .ufoo{
     position:absolute;
     width:1300px;
@@ -146,7 +149,7 @@ $moon-shine: rgba(157, 229, 253, 0.59);
     left:-1000px;
 }
 
-#beam{opacity: 0;}
+#beam{transform: scaleY(0);}
 
 .line{
     width:70px;
@@ -586,7 +589,7 @@ section {
     width:100%;
     height:121px;
     display: flex;
-    margin-top:-30%;
+    margin-top:-60%;
     justify-content: center;
     font-size: 50px;
 }
@@ -1016,41 +1019,26 @@ $starCount: 10;
 
 }
 
-@keyframes film{
-    from{transform: translate(0,0) rotate(2deg)}
-    to{transform: translate(1000px,35px) rotate(2deg)}
-}
 
-@keyframes film2{
-    from{transform: translate(1000px,-35px) rotate(-2deg)}
-    to{transform: translate(0px,0) rotate(-2deg)}
-}
-
-@keyframes fire{
-    from{transform:scale(0.8);}
-    to{transform:scale(1)}
-}
-
-@keyframes rocket{
-    0%{transform: translate(-3000%,800%);}
-    50%{transform: translate(-1000%,600%);}
-    100%{transform: translate(0%);}
-}
 
 @keyframes tvv{
-    from{transform: translate3d(0px,0px,0px) scale(0)}
-    to{transform: translate3d(0px,0px,0px) scale(1)}
+    0%{transform: translate3d(0px,0px,0px) scale(0)}
+    80%{transform: translate3d(0px,800px,0px) scale(1)}
+    100%{display: none;}
 }
 
-// @keyframes ufo{
-//     0%{transform:translate3d(1300px,1650px, 0px)}
-//    20%{transform:translate3d(1300px,1650px, 0px)}
-//    40%{transform:translate3d(1300px,1650px, 0px)}
-//    50%{transform:translate3d(1300px,1670px, 0px)}
-//    60%{transform:translate3d(1300px,1650px, 0px)}
-//    80%{transform:translate3d(1300px,1670px, 0px)}
-//    100%{transform:translate3d(1300px,1670px, 0px)}
-// }
+@keyframes ufo{
+    0%{transform:translate3d(1300px,1650px, 0px)}
+  100%{transform:translate3d(1300px,1670px, 0px)}
+
+}
+
+@keyframes ufo2{
+    0%{transform:scaleX(0);
+    transform-origin: top;}
+    100%{transform:scaleX(1);
+        transform-origin: top;}
+}
 
 
 
