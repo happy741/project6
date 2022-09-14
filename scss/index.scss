@@ -10,7 +10,8 @@
 }
 
 body{
-background-color: #17182f;;
+background-color: #17182f;
+overflow-x: hidden;
 }
 ul,li,ol{
     list-style: none;
@@ -45,6 +46,7 @@ $c: pointer;
     color: $col;
 }
 
+
 .main {
     width: $w;
     height: 200vh;
@@ -56,7 +58,34 @@ $c: pointer;
     color:white;
 
 }
+.main_text{
 
+
+p{
+    width:100px;
+    font-size: 20px;
+    height:600px;
+    color:#fff;
+    writing-mode: vertical-rl;
+    position:absolute;
+    &:first-of-type{
+        left:25%;
+        top:120%;
+    }
+    &:nth-of-type(2){
+        left:65%;
+        top:170%;
+    }
+    &:nth-of-type(3){
+        left:15%;
+        top:210%;
+    }
+    &:nth-of-type(4){
+        left:80%;
+        top:250%;
+    }
+}
+}
 }
 $moon-shine: rgba(157, 229, 253, 0.59);
 .moon {
@@ -171,7 +200,7 @@ $moon-shine: rgba(157, 229, 253, 0.59);
 
 section {
     width: $w;
-    height: 4000px;
+    height: 3738px;
     position:relative;
 
     color: white;
@@ -180,10 +209,10 @@ section {
 
 #sec_box{
     width:100%;
-    height:2040px;
+    height:2085px;
     transition: 1s linear;
     top:-121.8%;
-    @include bg('../img/3tv.png',cover, flex-start);
+    @include bg('../img/3tv.png',cover,top);
     @include flex(flex, center, flex-start, column);
  
     position:sticky;
@@ -220,7 +249,7 @@ section {
     overflow: hidden;
     width:319px;
     height:237px;
-    top:74.5%;
+    top:73%;
     left:41.5%;
     position:absolute;
 }
@@ -294,7 +323,7 @@ section {
             font-size: 4.5vw;
             transform: translateY(90%);
             transition: $t;
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: 'MaruBuri-Regular';
         }
         
     }
@@ -308,7 +337,7 @@ section {
             font-size: 4.5vw;
             transform: translateY(90%);
             transition: $t;
-            font-family: Arial, Helvetica, sans-serif;
+             font-family: 'MaruBuri-Regular';
         }
     }
 
@@ -321,7 +350,7 @@ section {
             font-size: 4.5vw;
             transform: translateY(90%);
             transition: $t;
-            font-family: Arial, Helvetica, sans-serif;
+             font-family: 'MaruBuri-Regular';
         }
     }
 
@@ -334,7 +363,7 @@ section {
             font-size: 4.5vw;
             transform: translateY(90%);
             transition: $t;
-            font-family: Arial, Helvetica, sans-serif;
+             font-family: 'MaruBuri-Regular';
         }
     }
 
@@ -347,7 +376,7 @@ section {
             font-size: 4.5vw;
             transform: translateY(90%);
             transition: $t;
-            font-family: Arial, Helvetica, sans-serif;
+             font-family: 'MaruBuri-Regular';
         }
     }
 
@@ -382,7 +411,6 @@ section {
         width:200px;
         height:50px;
         transition:$t;
-        background-color: none;
         position:relative;
         @include flex(flex,center,center,row);
         a{
@@ -587,12 +615,19 @@ section {
 }
 .about_box{
     width:100%;
-    height:121px;
+    height:57px;
     display: flex;
-    margin-top:-60%;
+    margin-top:-90%;
+    flex-direction: column;
     justify-content: center;
-    font-size: 50px;
+    align-items: center;
+    font-size: 40px;
+    color:#eee;
+    p{
+        margin-top:24%;
+    }
 }
+
 .about{
     width:100%;
     height:2580px;
@@ -623,7 +658,7 @@ section {
     user-select: none; 
   }
  
-.my1{
+#my1{
    width:95%;
    height:400px;
 
@@ -636,6 +671,7 @@ section {
     @include flex(flex,space-around,center,row);
     border-radius:50%;
     border: 2px dotted white;
+    z-index: 999;
     &::before, &::after{
         content: "";
         position:absolute;
@@ -686,15 +722,44 @@ section {
     width:35%;
     height:400px;
     @include flex(flex,space-around,center,row);
+    .pol1{
+        @include bg('../img/img1.jpg',cover,bottom);
+    }
+    .pol2{
+        @include bg('../img/img2.jpg',cover,bottom);
+    }
+    .pol3{
+        @include bg('../img/img3.jpg',cover,bottom);
+    }
+    .pol4{
+        @include bg('../img/img4.jpg',cover,bottom);
+    }
+
+    .pol5{
+        transform: translateX(720px);
+    }
+    .pol6{
+        transform: translateX(400px);
+    }
+    .pol7{
+        transform: translateX(-400px);
+    }
+    .pol8{
+        transform: translateX(-720px);
+    }
+
     .pola2{
         width:45%;
         height:80%;
         background-color: white;
         @include flex(flex,center,center,column);
+        transition:1s linear;
+
         .pola3{
             width:95%;
             height:250px;
             background-color: blanchedalmond;
+
         }
         p{
             width:95%;
@@ -754,28 +819,91 @@ section {
     margin-top: 10%;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-evenly;
+    position:relative;
+    overflow: hidden;
 
-            
-    &:first-of-type{
+
+
+ }
+  .circe_wave {
+
+    width: 210px;
+    height: 210px;
+    background: #ccc;
+    border: 1px dashed #666;
+    border-radius: 50%;
+    position:relative;
+    overflow: hidden;
+    // &::after{
+    //     content:'';
+    //     width: 190px;
+    //     height: 190px;
+    //     border-radius: 50%;
+    //     background-color: rgba(255,255,255,0.95);
+    //     position:absolute;
+    //     z-index: 999;
+    //     top:0;
+    //     left:0;
+    //     transform: translateX(180px);
+    //     transform-origin: left;
+    //     transition:$t;
+    // }
+
+    // &:hover::after{
+    //     transform: translateX(0px);
+    // }
+    
+    &:nth-child(3){
+        .wave{
+            &::before,&::after{
+                animation: wave1 5s linear infinite;
+            }
+        }   
+    }
+
+    &:nth-child(4){
         .wave{
             &::before,&::after{
                 animation: wave2 5s linear infinite;
             }
-        }
-           
-     
-     
+        }   
     }
- }
-  .circe_wave {
+    &:nth-child(5){
+        .wave{
+            &::before,&::after{
+                animation: wave4 5s linear infinite;
+            }
+        }   
+    }
+    &:nth-child(6){
+        .wave{
+            &::before,&::after{
+                animation: wave4 5s linear infinite;
+            }
+        }   
+    }
 
-    width: 150px;
-    height: 150px;
-    background: #ccc;
-    border: 1px dashed #333;
-    border-radius: 50%;
-    overflow: hidden;
-    position:relative;
+
+    &:nth-child(8){
+        .wave{
+            &::before,&::after{
+                animation: wave2 5s linear infinite;
+            }
+        }   
+    }
+    &:nth-child(10){
+        .wave{
+            &::before,&::after{
+                animation: wave3 5s linear infinite;
+            }
+        }   
+    }
+
+    &:hover .circle_hover{
+        transform: translateX(0);
+    }
+    
     p{
         position:absolute;
         color:black;
@@ -784,14 +912,35 @@ section {
         transform: translate(-50%, -50%);
         font-size: 20px;
         z-index: 999;
+        font-family: 'HallymGothic-Regular';
     }
+
+    .circle_hover{
+            width: 210px;
+            height: 210px;
+            border-radius: 50%;
+            background-color: rgba(255,255,255,0.95);
+            position:absolute;
+            z-index: 999;
+            top:0;
+            left:0;
+            transform: translateX(200px);
+            transform-origin: left;
+            transition:$t;
+        
+            p{
+                font-size: 13px;
+            }
+    }
+
     .wave {
       position: relative;
       width: 100%;
       height: 100%;
-      background: #21c1e9;
+      background: #fff;
       border-radius: 50%;
   
+     
       &:before,
       &:after {
         content: '';
@@ -813,7 +962,7 @@ section {
       
       &:after {
         border-radius: 40%;
-        background: rgba(255, 255, 255, .5);
+        background: #17182f;
         animation: wave 5s linear infinite;
       }
     }
@@ -866,31 +1015,6 @@ section {
 
 
  
-  @keyframes wave {
-    0% {
-      transform: translate(-50%, -88%) rotate(0deg);
-    }
-    100% {
-      transform: translate(-50%, -88%) rotate(360deg);
-    }
-  }
-  @keyframes wave1 {
-    0% {
-      transform: translate(-50%, -75%) rotate(0deg);
-    }
-    100% {
-      transform: translate(-50%, -75%) rotate(360deg);
-    }
-  }
-
-  @keyframes twinkle {
-    from {
-      transform: scale(1);
-    }
-    to {
-      transform: scale(0.3);
-    }
-}
   $shootingStarContainerCount: 3;
 $starCount: 10;
 
@@ -927,21 +1051,7 @@ $starCount: 10;
     }
 }
 
-@keyframes shootingFrames {
-    0% {
-        transform: translateX(0);
-        width: 0;
-    }
 
-    30% {
-        width: 200px;
-    }
-
-    100% {
-        width: 0;
-        transform: translateX(random(100) + 800px);
-    }
-}
 
 .clouds {
     background: transparent url('https://wolf.drjm.co.uk/nightsky/clouds.png') repeat top center;
@@ -958,15 +1068,7 @@ $starCount: 10;
     display: block;
 }
 
-@keyframes cloudsFrames {
-    from {
-        background-position: 0 0;
-    }
 
-    to {
-        background-position: 10000px 0;
-    }
-}
 
 .fogContainer {
     width: 100vw;
@@ -990,6 +1092,31 @@ $starCount: 10;
     background: linear-gradient(-5deg, #{"#00000000 0%, #ffffff15 40%, #74590121 45%, #8b845b21 55%, #00000000 70%"});
 }
 
+@keyframes shootingFrames {
+    0% {
+        transform: translateX(0);
+        width: 0;
+    }
+
+    30% {
+        width: 200px;
+    }
+
+    100% {
+        width: 0;
+        transform: translateX(random(100) + 800px);
+    }
+}
+
+@keyframes cloudsFrames {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 10000px 0;
+    }
+}
 
 
 @keyframes fogFrames {
@@ -1041,6 +1168,57 @@ $starCount: 10;
 }
 
 
+@keyframes wave {
+    0% {
+      transform: translate(-50%, -93%) rotate(0deg);
+    }
+    100% {
+      transform: translate(-50%, -93%) rotate(360deg);
+    }
+  }
+  @keyframes wave1 {
+    0% {
+      transform: translate(-50%, -85%) rotate(0deg);
+    }
+    100% {
+      transform: translate(-50%, -85%) rotate(360deg);
+    }
+  }
+  @keyframes wave2 {
+    0% {
+      transform: translate(-50%, -88%) rotate(0deg);
+    }
+    100% {
+      transform: translate(-50%, -88%) rotate(360deg);
+    }
+  }
+
+  @keyframes wave3 {
+    0% {
+      transform: translate(-50%, -80%) rotate(0deg);
+    }
+    100% {
+      transform: translate(-50%, -80%) rotate(360deg);
+    }
+  }
+
+  @keyframes wave4 {
+    0% {
+      transform: translate(-50%, -85%) rotate(0deg);
+    }
+    100% {
+      transform: translate(-50%, -85%) rotate(360deg);
+    }
+  }
+
+  @keyframes twinkle {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(0.3);
+    }
+}
 
 
 
