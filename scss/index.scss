@@ -56,6 +56,7 @@ $c: pointer;
  h1{
     font-size:8vw;
     color:white;
+    font-family: 'Black Han Sans', 'sans-serif'
 
 }
 .main_text{
@@ -835,6 +836,7 @@ section {
     border-radius: 50%;
     position:relative;
     overflow: hidden;
+    z-index: 999;
     // &::after{
     //     content:'';
     //     width: 190px;
