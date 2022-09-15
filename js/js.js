@@ -121,9 +121,9 @@
                             <P>HTML과 CSS를 배우며 처음 만든 페이지이며<br>
                                 여러가지 악기들과 LP를 판매하는 사이트입니다.</P>
                                 <div class="block_box">
-                                <div class='block'>MAIN</div>
-                                <div class='block block1'>SUB</div>
-                                <div class='block block2'>SUB2</div>
+                               <a href="#" class='block3' target="_blank"> <div class='block block0'>MAIN</div></a>
+                               <a href="#" class='block4' target="_blank"><div class='block block1'>SUB</div></a>
+                               <a href="#" class='block5' target="_blank"><div class='block block2'>SUB2</div></a>
                                 </div>
                             <div class="code_box">
                                 <p>메인페이지의 배너부분의 코드입니다.</p>
@@ -190,6 +190,9 @@
         var js = document.querySelectorAll('.jj');
         var block2 = document.querySelectorAll('.block2');
         var block1 = document.querySelectorAll('.block1');
+        var main = document.querySelectorAll('.block3');
+        var sub1 = document.querySelectorAll('.block4');
+        var sub2 = document.querySelectorAll('.block5');
         var arr=['https://happy741.github.io/project1/','https://happy741.github.io/project2/','https://happy741.github.io/project3/','https://happy741.github.io/project4/index2.html','https://happy741.github.io/project5/'];
         block2[2].style.opacity = '1';
         block1[3].style.opacity = '0';
@@ -201,22 +204,23 @@
         img2[2].src = 'img/q2.jpg';
         img1[3].src = 'img/poke1.jpg';
         img2[3].src = 'img/poke2.jpg';
-        img1[4].src = 'img/B1.jpg';
-        img2[4].src = 'img/B2.jpg';
-        // link[0].href = 'https://happy741.github.io/project1/';
-        // link2[0].href = 'https://happy741.github.io/project1/';
+        img1[4].src = 'img/b1.jpg';
+        img2[4].src = 'img/b2.jpg';
         link[1].href = arr[0];
         link2[1].href = arr[1];
         link2[3].href= arr[3];
-
         link[2].href = 'https://happy741.github.io/project3/';
         link2[2].href = 'https://happy741.github.io/project3/';
-
-        // link[3].href = 'https://happy741.github.io/project2/';
-        // link2[3].href = 'https://happy741.github.io/project2/';
-
         link[4].href = 'https://happy741.github.io/project5/';
         link2[4].href = 'https://happy741.github.io/project5/';
+
+        main[0].href=arr[0];
+        main[1].href=arr[1];
+        main[2].href=arr[2];
+        main[3].href=arr[3];
+        main[4].href=arr[4];
+
+    
         
         
 
