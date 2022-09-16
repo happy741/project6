@@ -19,7 +19,19 @@ ul,li,ol{
 $w: 100vw;
 $t: 0.3s ease;
 $c: pointer;
-
+.image1{
+   img{
+    width:100%;
+    height:100%;
+   }
+   
+}
+.image{
+    img{
+        width:100%;
+        height:100%;
+    }
+}
 
 
 @mixin flex($flex, $js, $ali, $row) {
@@ -201,7 +213,7 @@ $moon-shine: rgba(157, 229, 253, 0.59);
 
 section {
     width: $w;
-    height: 3738px;
+    height: 3774px;
     position:relative;
 
     color: white;
@@ -210,7 +222,7 @@ section {
 
 #sec_box{
     width:100%;
-    height:2085px;
+    height:2148px;
     transition: 1s linear;
     top:-121.8%;
     @include bg('../img/3tv.png',cover,top);
@@ -250,7 +262,7 @@ section {
     overflow: hidden;
     width:319px;
     height:237px;
-    top:73%;
+    top:71%;
     left:41.5%;
     position:absolute;
 }
@@ -401,7 +413,7 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    backdrop-filter: blur(5px);
+    // backdrop-filter: blur(5px);
     h1{
         font-size: 5vw;
     }
@@ -433,6 +445,13 @@ section {
 }
 .left_box{
     margin-left:50px;
+    p{
+        margin-bottom:10px;
+    }
+    h1{
+        font-size: 80px;
+        margin-bottom:30px;
+    }
 }
 .button+p{
     width:75%;
@@ -443,6 +462,7 @@ section {
     display: flex;
     a{
         text-decoration: none;
+        margin-right:5px;
     }
 }
 .block{
@@ -706,6 +726,7 @@ section {
     height:350px;
     background-color: white;
     border-radius: 50%;
+    @include bg('../img/img5.jpg',cover,center);
     &::before, &::after{
         content: "";
         border-radius: 50%;

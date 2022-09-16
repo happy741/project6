@@ -15,7 +15,7 @@
             $('.text').click(function () {
                 var index = $(this).index();
                 $('.port_box').eq(index).css({ transform: 'translate(0)' },);
-                console.log(index);
+                $('.port_box_left').css('backdrop-filter','blur(5px)');
                 $('.next').click(function () {
                     index++;
                     if (index > 4) {
@@ -26,7 +26,6 @@
                     $('.css').css('display', 'none');
                 $('.js').css('display', 'none');
                 $('.html').css('display', 'block');
-
                 });
                 $('.prev').click(function () {
                     index--;
@@ -38,6 +37,7 @@
                     $('.css').css('display', 'none');
                 $('.js').css('display', 'none');
                 $('.html').css('display', 'block');
+                
                 });
             });
 
@@ -47,6 +47,7 @@
                 $('.css').css('display', 'none');
                 $('.js').css('display', 'none');
                 $('.html').css('display', 'block');
+                $('.port_box_left').css('backdrop-filter','blur(0px)');
             });
         });
 
@@ -194,6 +195,8 @@
         var sub1 = document.querySelectorAll('.block4');
         var sub2 = document.querySelectorAll('.block5');
         var arr=['https://happy741.github.io/project1/','https://happy741.github.io/project2/','https://happy741.github.io/project3/','https://happy741.github.io/project4/index2.html','https://happy741.github.io/project5/'];
+        var arr2=['https://happy741.github.io/project1/sub.html','https://happy741.github.io/project2/sub.html','https://happy741.github.io/project3/sub1.html','https://happy741.github.io/project5/sub.html'];
+        // https://happy741.github.io/project3/sub2.html
         block2[2].style.opacity = '1';
         block1[3].style.opacity = '0';
         js[0].style.display = 'none';
@@ -220,8 +223,11 @@
         main[3].href=arr[3];
         main[4].href=arr[4];
 
-    
-        
+        sub1[0].href=arr2[0];
+        sub1[1].href=arr2[1];
+        sub1[2].href=arr2[2];
+        sub1[4].href=arr2[3];
+        sub2[2].href="https://happy741.github.io/project3/sub2.html";
         
 
         h1[0].innerText = 'MUSICON'
@@ -302,9 +308,9 @@
         h1[2].innerText = 'QUANTIC DREAM'
         h1[3].innerText = 'POKEMON'
         h1[4].innerText = "BANDI&LUNI'S"
-        p[1].innerText = "독특한 컨셉들을 촬영해주는 사진관이며 반응형과 제이쿼리,자바스크립트 등등 처음 배워 적용했던 사이트 입니다."
+        p[1].innerText = "독특한 컨셉들을 촬영해주는 사진관이며 반응형과 jQuery, JS 등등 처음 배워 적용했던 사이트 입니다."
         p[2].innerText = "퀀틱드림회사의 디트로이트 비컴휴먼 게임 홈페이지를 제작했습니다. 게임의 컨셉에 맞춰 애니메이션 효과를 많이 주고 서브페이지는 다른 게임들의 소개하는 페이지를 제작했습니다."
-        p[3].innerText = "포켓몬의 불가사의던전dx를 소개하는 내용입니다. 한국에 정식발매안해 한국 사이트가 없어 제작해봤습니다."
+        p[3].innerText = "포켓몬의 불가사의던전dx를 소개하는 내용입니다. 한국에 정식발매를 안해 한국 사이트가 없어 제작해봤습니다."
         p[4].innerText = "ajax를 이용하여 만든 책 홈페이지 입니다."
         p1[1].innerText = 'sub페이지의 모바일 사이즈에 버튼을 누르면 박스의 세로크기가 줄었다 늘었다 하는 코드입니다.'
         p1[2].innerText = 'sub2페이지의 슬라이드 부분의 비내리는 효과입니다.'
